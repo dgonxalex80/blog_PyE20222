@@ -1,0 +1,12 @@
+name: "website"
+title: "PyE 2022-2"
+description: |
+  Blog de Probabilidad y Estadística  2022-2
+output_dir: "docs"
+navbar:
+  right:
+    - text: "About"
+      href: index.html
+    - text: "Blog"
+      href: blog.html     
+output: distill::distill_article
