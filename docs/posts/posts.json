@@ -47,7 +47,75 @@
     "categories": [],
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-09-30T23:29:24-05:00",
+    "last_modified": "2022-09-30T23:30:28-05:00",
     "input_file": "articulo-03-11.knit.md"
+  },
+  {
+    "path": "posts/2022-09-30-articulo-04-02/",
+    "title": "articulo-04-02",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Marlon\tMontero Guzman",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-30",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-09-30T23:30:55-05:00",
+    "input_file": "articulo-04-02.knit.md"
+  },
+  {
+    "path": "posts/2022-09-30-articulo-05-07/",
+    "title": "articulo-05-07",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Santiago\tMontaño Lopez",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-30",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-09-30T23:31:05-05:00",
+    "input_file": "articulo-05-07.knit.md"
+  },
+  {
+    "path": "posts/2022-09-30-articulo-06-03/",
+    "title": "articulo-06-03",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Juan\tLozano Escobar",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-30",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-09-30T23:31:13-05:00",
+    "input_file": "articulo-06-03.knit.md"
+  },
+  {
+    "path": "posts/2022-09-30-articulo-07-16/",
+    "title": "articulo-07-16",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Camila\tOlarte Lopez",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-30",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-09-30T23:31:20-05:00",
+    "input_file": "articulo-07-16.knit.md"
   }
 ]
