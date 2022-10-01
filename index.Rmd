@@ -1,7 +1,8 @@
 ---
-title: "PyE 2022-2"
+title: "Probabilidad y Estadística 2022-2"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Blog Modelos de los de probabilidad estadísticos!
+  Elaborado por los estudiantes de los grupos A y C 
 site: distill::distill_website
 ---
 

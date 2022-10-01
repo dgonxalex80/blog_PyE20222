@@ -5,15 +5,15 @@
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-09-30T23:36:30-05:00"
+      "last_modified": "2022-09-30T23:40:17-05:00"
     },
     {
       "path": "index.html",
-      "title": "PyE 2022-2",
-      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "title": "Probabilidad y Estadística 2022-2",
+      "description": "Blog Modelos de los de probabilidad estadísticos!\nElaborado por los estudiantes de los grupos A y C \n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-09-30T23:36:30-05:00"
+      "last_modified": "2022-09-30T23:43:18-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
