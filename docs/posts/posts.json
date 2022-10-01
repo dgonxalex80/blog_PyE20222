@@ -15,5 +15,39 @@
     "preview": {},
     "last_modified": "2022-09-30T23:26:07-05:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2022-09-30-articulo-02-14/",
+    "title": "articulo-02-14",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Joan Estibens\tTrejos Marulanda",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-30",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-09-30T23:29:14-05:00",
+    "input_file": "articulo-02-14.knit.md"
+  },
+  {
+    "path": "posts/2022-09-30-articulo-03-11/",
+    "title": "articulo-03-11",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Laura\tGuerra Segura",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-30",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-09-30T23:29:24-05:00",
+    "input_file": "articulo-03-11.knit.md"
   }
 ]
