@@ -5,6 +5,7 @@ description: |
 author:
   - name: Maria Paula Valencia
 date: "`r Sys.Date()`"
+preview: Erlang.jpg
 output: distill::distill_article
 ---
 

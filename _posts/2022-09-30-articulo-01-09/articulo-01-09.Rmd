@@ -4,6 +4,7 @@ description: |
   A short description of the post.
 author: "Emerson Armando\tRamirez Gutierrez"
 date: 2022-09-30
+preview:
 output:
   distill::distill_article:
     self_contained: false
