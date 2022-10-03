@@ -1,5 +1,39 @@
 [
   {
+    "path": "posts/2022-09-30-articulo-08-04/",
+    "title": "Distribución geométrica o de pascal",
+    "description": "Principales caracteristicas de la distribución geométrica o de pascal.",
+    "author": [
+      {
+        "name": "Isabella Gonzalez",
+        "url": {}
+      }
+    ],
+    "date": "2022-10-03",
+    "categories": [],
+    "contents": "\nOrigen:\nLa distribución geométrica también conocida como distribución de Pascal, fue esbozada en el escrito El arte de la conjetura, escrita por Jakob Bernoulli matematico y cienfitico que nació el 27 de diciembre de 1654 en Basilea, Suiza y murio el 16 de agosto de 1705.\nCaracteristicas principales:\nLa distribución geométrica es un modelo adecuado para aquellos procesos en los que se repiten pruebas hasta lograr el éxito al resultado deseado.\nMedia: E[x]= 1/p\nVarianza: Var[x]= 1-p/p^2\n\nEjemplo y su solución:\nLa probabilidad de que cierto examen médico dé lugar a una reacción “positiva” es igual a 0,8, ¿cuál es la probabilidad de que ocurran menos de 5 reacciones negativas antes de la primera positiva? La variable aleatoria número de reacciones negativas antes de la primera positiva sigue una distribución geométrica con parámetro p = 0,8.\n\n\ndgeom(4,0.8)\n\n[1] 0.00128\n\nE = 1.25\n1/0.8    \n\n[1] 1.25\n\nV = 0.3125\n(1-0.8)/0.8^2\n\n[1] 0.3125\n\n#Relaciones entre distribuciones nivariadas\nRelacion nivariadasAplicación en diferentas campos:\nEn juegos de azar: La distribución geométrica permite calcular la probabilidad de que tenga que realizarse un número k de repeticiones antes de obtener un éxito por primera vez.\nSe utiliza támbien en la distribución de tiempos de espera, de manera que si los ensayos se realizan a intervalos regulares de tiempo, esta variable aleatoria proporciona el tiempo transcurrido hasta el primer éxito.\nReferencias:\nhttps://www.sergas.es/Saude-publica/Documents/1899/Ayuda_Epidat_4_Distribuciones_de_probabilidad_Octubre2014.pdf\nhttps://www.youtube.com/watch?v=PCt4vvWnRlc&ab_channel=AulaDeEconomia\nhttps://dgonxalex80.github.io/pye20222/recurso303.html#geom%C3%A9trico_o_de_Pascal\n\n\n\n",
+    "preview": "posts/2022-09-30-articulo-08-04/distrpasc.png",
+    "last_modified": "2022-10-03T10:11:40-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-09-30-articulo-12-08/",
+    "title": "Distribución Estadística Exponencial",
+    "description": "Definición y caracteristicas de la distribución exponencial con sus aplicaciones.",
+    "author": [
+      {
+        "name": "Maria Paula Valencia",
+        "url": {}
+      }
+    ],
+    "date": "2022-10-03",
+    "categories": [],
+    "contents": "\nDefinición\nLa distribución exponencial es el equivalente continuo de la distribución geométrica discreta.Este modelo describe procesos en los que nos interesa saber el tiempo hasta que ocurre determinado evento sabiendo que el tiempo que puede ocurrir desde cualquier instante dado t, hasta que ello ocurra en un instante tf, no depende del tiempo transcurrido anteriormente en el que no ha pasado nada.\nORIGEN DE LA DISTRIBUCIÓN\nGracias a Agner Krarup Erlang, un matemático danés, se identificó que la distribución exxponencial viene derivada de las distribución de Poisson ya que al suponerse que para cada valor t>0, que representa el tiempo, el número de sucesos de cierto fenómeno aleatorio sigue una distribución de Poisson de parámetro t. Por ende, los tiempos discurridos entre 2 sucesos sucesivos sigue la distribución exponencial.\nCARACTERISTICAS PRINCIPALES\nSi una variable aleatoria continua X, con distribución de probabilidad exponencial tenemos que su función de densidad, su varianza, esperanza, y función de distribución son:\n\nA su vez, su representación grafica es la siguiente:\n\nCODIGO EN R\nLas funciones anteriormente descritas pueden calcularse con las siguientes funciones en R, sabiendo que por defecto, estas consideran la distribución exponencial con párametro λ=1.\n\nEjemplo\nSe sabe que el tiempo en una página web sigue una distribución exponencial con una media de 5 minutos por visita.\nSe require calcular la probabilidad de que la visita a la pagina dure como mucho 3 minutos.\nSolución\ncomo \\(E(X) = \\frac {1}{\\lambda}; 5 = \\frac {1}{\\lambda};\\lambda = 0.2\\).\nP(X≤3)=1-[1−P(X<3)]\n=1-[1−(1−e^(−0.2*3)]\n=1-0.548812\n=0.451188\nCódigo en R\npexp(3, rate = 0.2) # 0.4511884 o 45.12%\n1 - pexp(3, rate = 0.2, lower.tail = FALSE) # Equivalente\nLa probabilidad Calculada (45.12%) corresponde al área que podemos graficar en R con el siguiente código:\nexp_area(rate = 0.2, ub = 3, acolor = rgb(0, 0, 1, alpha = 0.5))\ntext(1, 0.075, “45.12%”, srt = 90, col = “white”, cex = 1.2)\n\nEjemplo 1.2\nSi ademas, queremos encontrar la probabilidad de que la visita dure entre 2 y 6 minutos, podemos usar la función en R:\npexp(6, rate = 0.2) - pexp(2, rate = 0.2) # 0.3691258 o 36.91%\nY si queremos obtener el grafico correspondente de la probabilidad usamos:\nexp_area(rate = 0.2, lb = 2, ub = 6, acolor = rgb(0, 0, 1, alpha = 0.5))\ntext(4, 0.05, “36.91%”, col = “white”, cex = 1.2)\n\nAplicaciones\nComo se habia dicho anteriormente, esta distribución se utiliza para describir procesos en los que interesa saber el tiempo hasta que ocurre determinado evento, en particular, se utiliza para modelar tiempos de supervivencia como el tiempo que tarda una parícula en desintegrarse. Se utilizan habitualmente en cálculos de fiabilidad de productos, es decir, el tiempo que dura un producto (control de calidad).\nRelaciones entre distribuciones nivariadas\nLa principal reación que encontramos de la distribución exponencial es con la distribución de Poisson.\n\nReferencias\nhttps://openstax.org/books/introducci%C3%B3n-estad%C3%ADstica-empresarial/pages/5-3-la-distribucion-exponencial\nhttp://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro19/52distribucin_exponencial.html\nhttps://medium.com/qu4nt/distribucion-exponencial-python-1d921a87f835#:~:text=La%20distribuci%C3%B3n%20exponencial%20se%20encuentra,misma%20en%20la%20literatura%20estad%C3%ADstica.\nhttps://r-coder.com/distribucion-exponencial-r/#:~:text=(2)%20%23%200.8646647-,Ejemplo%20con%20pexp%3A%20calculando%20probabilidades%20exponenciales,0.2%20%CE%BB%3D0.2.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-10-03T09:59:51-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-09-30-articulo-01-09/",
     "title": "articulo-01-09",
     "description": "A short description of the post.",
@@ -119,23 +153,6 @@
     "input_file": {}
   },
   {
-    "path": "posts/2022-09-30-articulo-08-04/",
-    "title": "articulo-08-04",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Isabella\tGonzalez Mejia",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:32:05-05:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2022-09-30-articulo-09-16/",
     "title": "articulo-09-16",
     "description": "A short description of the post.",
@@ -184,23 +201,6 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
     "last_modified": "2022-09-30T23:32:30-05:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2022-09-30-articulo-12-08/",
-    "title": "articulo-12-08",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Maria\tValencia Piedrahita",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:32:37-05:00",
     "input_file": {}
   },
   {
