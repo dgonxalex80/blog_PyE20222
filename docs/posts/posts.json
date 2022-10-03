@@ -34,6 +34,23 @@
     "input_file": {}
   },
   {
+    "path": "posts/2022-09-30-articulo-17-09/",
+    "title": "Distribución estadística Gamma",
+    "description": "Este modelo nos lleva a una función de densidad de probabilidad cuyas variables aleatorias son no negativas y tienen distribuciones sesgadas hacia la derecha, es decir la mayor parte del área bajo la curva de la función, se encuentran cerca del origen y los valores de la función de densidad disminuyen gradualmente cuando x aumenta.",
+    "author": [
+      {
+        "name": "Juan José García",
+        "url": {}
+      }
+    ],
+    "date": "2022-10-03",
+    "categories": [],
+    "contents": "\nDefinición\nEste modelo nos lleva a una función de densidad de probabilidad cuyas variables aleatorias son no negativas y tienen distribuciones sesgadas hacia la derecha, es decir la mayor parte del área bajo la curva de la función, se encuentran cerca del origen y los valores de la función de densidad disminuyen gradualmente cuando x aumenta.\nPara tratar las distribuciones Gamma, es necesario definir la función Gamma como:\n1y se ve representada graficamente así:\n2#Origen:\nLa distribución Gamma tiene su origen en la familia de curvas sesgadas propuestas por Karl Pearson. Uno de los primeros y más importantes trabajos del profesor Pearson fue su contribución al análisis de curvas sesgadas. La motivación del profesor Pearson nace al notar que ciertas medidas biológicas, sociológicas y económicas, existe una desviación de la forma normal y es importante la dirección y la cantidad de esa desviación.\n#Características\nLa distribución Gamma se obtiene al sumar r variables con distribución exponencial con parámetro λ.\nDistribución\nSi Y=X1+X2+….+Xr, Xi∼Exp(λ), entonces Y∼Γ(r,λ).\n3Algunos autores utilizan 1/β en lugar de λ y α en lugar de r.\nE[X]=r/λ\nV[X]=r/λ2\n#Ejemplo:\nEn cierta ciudad el consumo diario de energía eléctrica, en millones de kilovatios por hora, puede considerarse como una variable aleatoria con distribución Gamma de parámetros r=3 y λ=0.5. La planta de energía de esta ciudad tiene una capacidad diaria de 10 millones de KW/hora.\nInsuficiente en un día cualquiera.\nSe consuman entre 3 y 8 millones de kW/hora.\nObtener el consumo necesario para una probabilidad de: P(X <.x) = 0.9.\nPara resolver este apartado, necesitamos resolver: P( X > 10), empleamos para tal propósito, la función de distribución con el área de cola hacia la derecha y la alternativa para especificar el valor de escala:\nA mano:\n4\nR code:\npgamma(10,3,0.5, lower.tail = FALSE) =\n\n[1] 0.124652\n\nNos piden, la probabilidad: P(3 <.X <.8), empleamos para tal propósito, la función de distribución con el área de cola hacia la izquierda y la alternativa para especificar el valor de escala:\nR code:\npgamma(8, 3, rate = 0.5, lower.tail = T) - pgamma(3, 3, rate = 0.5, lower.tail = T)=\n\n\n\n[1] 0.5707435\n\nEn este caso nos piden obtener el consumo necesario para una probabilidad de 0.9, para tal fin, empleamos la función de quantiles indicando el área de cola hacia la izquierda:\nR code:\nqgamma(0.9, 3, rate = 0.5, lower.tail = T)=\n\n\n\n[1] 10.64464\n\n#Aplicaciones:\nLa distribución gamma se aplica a una gran diversidad de áreas, permitiéndonos una metodología en el marco de análisis de la biología y la ingeniería. Es una candidata popular para modelar procesos, dada su capacidad para asumir una amplia variedad de formas.\nUna elección frecuente, especialmente cuando se trata de representar datos de precipitación es la distribución gama. Muchas de estas variables atmosféricas son claramente asimétricas.\nEs muy utilizada en las teorías de la fiabilidad, mantenimiento y fenómenos de espera\n#Relaciones\n#Referencias:\nhttps://support.minitab.com/es-mx/minitab/21/help-and-how-to/probability-distributions-random-data-and-resampling-analyses/supporting-topics/distributions/gamma-distribution/\nhttp://unbarquero.blogspot.com/2009/06/r-distribucion-gamma.html\nhttps://www.coursehero.com/file/53397191/304787240-Distribucion-Gammadocx/\n\n\n\n",
+    "preview": "posts/2022-09-30-articulo-17-09/imagen5.png",
+    "last_modified": "2022-10-03T10:46:20-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-09-30-articulo-24-01/",
     "title": "Modelo discreto de distribución de probabilidad Binomial",
     "description": "El presente artículo expone las principales características del modelo discreto de probabilidad denominado Binomial para la solución de problemas en contexto y para su posterior simulación. Teniendo en cuenta las características de variables aleatorias discretas con sus respectivas funciones por ejemplo la función de distribución de probabilidad f(x) y la función de densidad conjunta para los casos discreto-discreto y continuo-continuo, entre otras funciones y variables vistas en las unidades abordadas previamente, serán útiles para entender dicho modelo de probabilidad que se presentará.",
@@ -286,23 +303,6 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
     "last_modified": "2022-09-30T23:35:04-05:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2022-09-30-articulo-17-09/",
-    "title": "articulo-17-09",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Juan\tGarcia Polanco",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:35:09-05:00",
     "input_file": {}
   },
   {
