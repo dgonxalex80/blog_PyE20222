@@ -1,21 +1,80 @@
 ---
-title: "articulo-26-01"
+title: "Modelo de distribución binomial"
 description: |
-  A short description of the post.
-author: "Jean\tVasquez Pinilla"
-date: 2022-09-30
+  En este artículo hablaremos del modelo binomial, su origen, sus caracteristicas más generales y como este toma lugar en la investigación de diversas areas de estudio, como la biología por ejemplo. Este artículo es realizado en el marco de la materia de probabilidad y estadistica, como parte de la actividad 331 acerca de los modelos de distribución.
+author:
+  - name: Jean Michael Vasquez Pinilla
+date: 2022-09-26
+preview: R.png
 output:
   distill::distill_article:
     self_contained: false
 ---
+## Origen del modelo binomial
+La distribución binomial fue desarrollada por Jakob Bernoulli (Suiza,1654‐1705) y es la principal distribución de probabilidad discreta para variables dicotómicas, es decir, que sólo pueden tomar dos posibles resultados. Este modelo es una variación del modelo de Bernoulli, donde se usa mas de un experimento para obtener los resultados deseados, a diferencia del modelo de Bernoulli, que usa un unico experimento. En pocas palabras, el modelo binomial es una generalización del modelo de Bernoulli.
 
+![](https://th.bing.com/th/id/R.800cfb9ee3ee06a475d3b2ebe8ac8bdd?rik=KMpd2KwZ0oMcww&pid=ImgRaw&r=0){width=60%}
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+## Caracteristicas del modelo binomial
+Describe datos discretos, resultantes de un experimento denominado proceso de Bernoulli en honor del matemático suizo Jacob Bernoulli. es una distribución de probabilidad discreta que cuenta el número de éxitos en una secuencia de {\displaystyle n}n ensayos de Bernoulli independientes entre sí con una probabilidad fija {\displaystyle p}p de ocurrencia de éxito entre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, esto es, solo dos resultados son posibles, a uno de estos se le denomina “éxito” y tiene una probabilidad de ocurrencia {\displaystyle p}p y al otro se le denomina “fracaso” y tiene una probabilidad {\displaystyle q=1-p}{\displaystyle q=1-p}. 
+Por lo tanto, la distribución binomial se entiende como una serie de pruebas o ensayos en la que solo podemos tener 2 resultados (éxito o fracaso), siendo el éxito nuestra variable aleatoria.
 
-Distill is a publication format for scientific and technical writing, native to the web.
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/da3660ed6436bbf2124b54ccd0c669f7978d7555){width=50%}
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+La respectiva grafica de la distribución binomial es esta:
 
+![](https://th.bing.com/th/id/OIP.kEdxxzrnMW1EuRI4RLU5jAHaEp?pid=ImgDet&rs=1){width=70%}
+
+Entre las diversas propiedades del modelo de distribución binomial encontramos:
+Si {\displaystyle X}X es una variable aleatoria discreta tal que {\displaystyle X\sim \operatorname {Bin} (n,p)}{\displaystyle X\sim \operatorname {Bin} (n,p)} entonces
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/8a847aa9a0c1fc2751c00a6b9cb4be55e784e88a){width=20%}
+
+La primera de ellas es fácil de demostrar, por definición de Esperanza
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/2a79b3bbc6629885fa167931449beb2cfef22035){width=50%}
+
+el primer término de la suma, es decir, para {\displaystyle x=0}x=0 el término vale cero por lo que podemos iniciar la suma en {\displaystyle x=1}{\displaystyle x=1}
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/32c894cfd35af2616e2d8a81cc88ea21c7b2d2b1){width=50%}
+
+Dado que
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/4217619a2c4c2bdbec7078bfd3958bf30773a710){width=50%}
+
+para {\displaystyle x\geq 1}{\displaystyle x\geq 1}.
+
+Reemplazando lo anterior en la expresión de {\displaystyle \operatorname {E} [X]}{\displaystyle \operatorname {E} [X]} obtenemos
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/5bc67bed2a02ae432cc12407cf80f43c94eaffea){width=50%}
+
+Haciendo el cambio de índice {\displaystyle k=x-1}{\displaystyle k=x-1} obtenemos
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/f99d72ff5bc2256f230792929d92e2edcb1f09d8){width=50%}
+
+Finalmente por la fórmula de Newton (Teorema del binomio)
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/c261728e25b77e0d253599a7b9d4aa1badf2f273){width=30%}
+
+Obtenemos
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/2df910e40405784cce9fc4519ea571d358a7dbea){width=50%}
+
+## Ejemplo del modelo binomial
+![](https://i.ytimg.com/vi/Wfg3ApvzGvs/maxresdefault.jpg)
+
+## Uso de este modelo en la biología
+Como lo es por ejemplo, en el caso de la biología, el modelo binomial sirve para conocer las probabilidades de exito de distintos procesos naturales, procesos tales como la supervivencia de la camada completa de aguiluchos en un nido de aguilas arpías, donde la variable de exito es si todas las crias sobreviven, caso contrario si no toda la camada sobrevive, siendo posible hacer inferencias acerca de la población y si es necesario tomar medidas para la proteccion de dicha especie.
+
+![](https://th.bing.com/th/id/R.d4831a3f668872d8e1d08c28782f5911?rik=jTuTf8C3gzFHMg&pid=ImgRaw&r=0)
+
+## ¿Cómo se relaciona con otros modelos?
+![](https://dgonxalex80.github.io/pye20222/img/poster.png)
+El modelo de distribución binomal está estrechamente relacionado con el modelo de Bernoulli, como mencioné anteriormente, pero tambien guarda relación con el modelo normal:
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/887472654d72a94b7dd52cde389360d72c56fcbd){width=50%}
+
+y el modelo hipergeometrico:
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/5c39fa13598501acae0fc6b1838226f3bd028e7f){width=30%}
+
+## Webgrafía y bibliografía
+https://riunet.upv.es/bitstream/handle/10251/7936/Distribucion%20binomial.pdf
+https://es.wikipedia.org/wiki/Distribuci%C3%B3n_binomial
+http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0123-59232013000300012
 

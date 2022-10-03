@@ -29,8 +29,25 @@
     "date": "2022-10-03",
     "categories": [],
     "contents": "\nDefinición\nLa distribución exponencial es el equivalente continuo de la distribución geométrica discreta.Este modelo describe procesos en los que nos interesa saber el tiempo hasta que ocurre determinado evento sabiendo que el tiempo que puede ocurrir desde cualquier instante dado t, hasta que ello ocurra en un instante tf, no depende del tiempo transcurrido anteriormente en el que no ha pasado nada.\nORIGEN DE LA DISTRIBUCIÓN\nGracias a Agner Krarup Erlang, un matemático danés, se identificó que la distribución exxponencial viene derivada de las distribución de Poisson ya que al suponerse que para cada valor t>0, que representa el tiempo, el número de sucesos de cierto fenómeno aleatorio sigue una distribución de Poisson de parámetro t. Por ende, los tiempos discurridos entre 2 sucesos sucesivos sigue la distribución exponencial.\nCARACTERISTICAS PRINCIPALES\nSi una variable aleatoria continua X, con distribución de probabilidad exponencial tenemos que su función de densidad, su varianza, esperanza, y función de distribución son:\n\nA su vez, su representación grafica es la siguiente:\n\nCODIGO EN R\nLas funciones anteriormente descritas pueden calcularse con las siguientes funciones en R, sabiendo que por defecto, estas consideran la distribución exponencial con párametro λ=1.\n\nEjemplo\nSe sabe que el tiempo en una página web sigue una distribución exponencial con una media de 5 minutos por visita.\nSe require calcular la probabilidad de que la visita a la pagina dure como mucho 3 minutos.\nSolución\ncomo \\(E(X) = \\frac {1}{\\lambda}; 5 = \\frac {1}{\\lambda};\\lambda = 0.2\\).\nP(X≤3)=1-[1−P(X<3)]\n=1-[1−(1−e^(−0.2*3)]\n=1-0.548812\n=0.451188\nCódigo en R\npexp(3, rate = 0.2) # 0.4511884 o 45.12%\n1 - pexp(3, rate = 0.2, lower.tail = FALSE) # Equivalente\nLa probabilidad Calculada (45.12%) corresponde al área que podemos graficar en R con el siguiente código:\nexp_area(rate = 0.2, ub = 3, acolor = rgb(0, 0, 1, alpha = 0.5))\ntext(1, 0.075, “45.12%”, srt = 90, col = “white”, cex = 1.2)\n\nEjemplo 1.2\nSi ademas, queremos encontrar la probabilidad de que la visita dure entre 2 y 6 minutos, podemos usar la función en R:\npexp(6, rate = 0.2) - pexp(2, rate = 0.2) # 0.3691258 o 36.91%\nY si queremos obtener el grafico correspondente de la probabilidad usamos:\nexp_area(rate = 0.2, lb = 2, ub = 6, acolor = rgb(0, 0, 1, alpha = 0.5))\ntext(4, 0.05, “36.91%”, col = “white”, cex = 1.2)\n\nAplicaciones\nComo se habia dicho anteriormente, esta distribución se utiliza para describir procesos en los que interesa saber el tiempo hasta que ocurre determinado evento, en particular, se utiliza para modelar tiempos de supervivencia como el tiempo que tarda una parícula en desintegrarse. Se utilizan habitualmente en cálculos de fiabilidad de productos, es decir, el tiempo que dura un producto (control de calidad).\nRelaciones entre distribuciones nivariadas\nLa principal reación que encontramos de la distribución exponencial es con la distribución de Poisson.\n\nReferencias\nhttps://openstax.org/books/introducci%C3%B3n-estad%C3%ADstica-empresarial/pages/5-3-la-distribucion-exponencial\nhttp://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro19/52distribucin_exponencial.html\nhttps://medium.com/qu4nt/distribucion-exponencial-python-1d921a87f835#:~:text=La%20distribuci%C3%B3n%20exponencial%20se%20encuentra,misma%20en%20la%20literatura%20estad%C3%ADstica.\nhttps://r-coder.com/distribucion-exponencial-r/#:~:text=(2)%20%23%200.8646647-,Ejemplo%20con%20pexp%3A%20calculando%20probabilidades%20exponenciales,0.2%20%CE%BB%3D0.2.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-10-03T09:59:51-05:00",
+    "preview": "posts/2022-09-30-articulo-12-08/Erlang.jpg",
+    "last_modified": "2022-10-03T10:25:24-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-09-30-articulo-24-01/",
+    "title": "Modelo discreto de distribución de probabilidad Binomial",
+    "description": "El presente artículo expone las principales características del modelo discreto de probabilidad denominado Binomial para la solución de problemas en contexto y para su posterior simulación. Teniendo en cuenta las características de variables aleatorias discretas con sus respectivas funciones por ejemplo la función de distribución de probabilidad f(x) y la función de densidad conjunta para los casos discreto-discreto y continuo-continuo, entre otras funciones y variables vistas en las unidades abordadas previamente, serán útiles para entender dicho modelo de probabilidad que se presentará.",
+    "author": [
+      {
+        "name": "Santiago Ruiz",
+        "url": {}
+      }
+    ],
+    "date": "2022-10-03",
+    "categories": [],
+    "contents": "\nOrigen de la distribución\nEl modelo de distribución binomial fue desarrollada por Jakob Bernoulli (Suiza,1654‐1705) y “es la principal distribución de probabilidad discreta para variables dicotómicas, es decir, que sólo pueden tomar dos 2 La distribución binomial posibles resultados (…)”. Sin embargo, el modelo de distribución binomial “(…) es una generalización de la distribución de Bernouilli, cuando en lugar de realizar el experimento aleatorio una sola vez , se realiza n, siendo cada ensayo independiente del anterior” (Mártinez, 2008).\nCaracterísticas Principales\n“Una distribución de probabilidad binomial es una distribución teórica, que se puede calcular mediante el uso de la fórmula de la función de probabilidad” (Mártinez, 2008). “Para construir una distribución binomial es necesario conocer el número de pruebas que se repiten y la probabilidad de que suceda un éxito en cada una de ellas” (Quevedo et al, 2014).\nUn experimento binomial tiene las siguientes características:\n• El experimento consta de n ensayos.\n• Cada ensayo tiene solo dos posibles resultados: éxito (E) o fracaso (F) (experimento Bernoulli).\n• La probabilidad de éxito es igual a p y se mantiene fija para todos los ensayos P(E). La probabilidad de fracaso es (1−p)=q.\n• Los ensayos son independientes.\n• La variable objeto de estudio X, corresponde al número de éxitos obtenidos en los n ensayos.\n• Se puede decir que la suma de n variables independientes con distribución Bernoulli(p), se distribuye de manera Bionomial(n,p)\nLa fórmula de la distribución binomial de probabilidad f(x) es la siguiente:\n\n\n\nPara el caso de el valor esperado y la varianza de una distribución binomial, se calculan de la sigueinte forma:\n\n\n\n“La distribución binomial se puede expresar de forma gráfica, y que en realidad consiste en un diagrama de barras, similar a los obtenidos en la función de probabilidad pero que van a ir variando su forma en función de los valores de n y de p al modificarse las probabilidades de los distintos posibles valores de P(X=x)” en este caso de P(X=k).\n\n\n\nEjemplo de la distribución\n“Últimamente con las clases de matemática no me va muy bien, por eso, he puesto mi cafetería. Preparo unas cosas riquísimas, pasteles, pizza, agua helada, pero lo más vendido son las matehamburguesas, las únicas hamburguesas que se venden con papas y leche chocolatada.\nLa probabilidad de que a un cliente nuevo le guste la matehamburguesa de Jorge es de 0,8. Si llegan 5 clientes nuevos a la cafetería, ¿cuál es la probabilidad de que solo a 3 de ellos les guste la matehamburguesa?”\nSolución:\n“En este caso, vamos a centrarnos en los clientes a los que les gusta esta hamburguesa, por ello diremos que:\nX = número de clientes nuevos de 5 a los que les gusta la matehamburguesa\nEntonces consideramos un éxito si al cliente le gusta esta hamburguesa. Se aplica la fórmula de distribución binomial y colocamos los valores de n, k y p. Recuerda que n es el número de ensayos, k el número de éxitos y p la probabilidad de éxito.”\nn = 5, x = 3, p = 0.8\nEn el siguiente paso se reemplazan los valores en la fórmula:\n\n\n\nLa respuesta es = 0,2048\nCódigo y solución en R\ndbinom(x=3, size=5, prob=0.8)\n\ndbinom(x=3, size=5, prob=0.8)\n[1] 0.2048\n\nAplicaciones de la distribución Binomial\n“La distribución Binomiales sin lugar a dudas la más importante y la de mayor uso de todas las distribuciones continuas de probabilidad. Su aplicación abarca prácticamente todas las áreas de la ciencia, gran parte de los fenómenos naturales y proporciona una representación adecuada, al menos en una primera aproximación, de gran cantidad de variables físicas. Así, su uso comprende problemas relativos a la ingeniería, economía, sociología, agricultura, medicina, biología, finanzas, meteorología, geofísica, mediciones de partes manufacturadas, errores de instrumentos de medición, etc” (Mora, 2014).\nRelaciones entre distribuciones univariadas\n\n\n\nFuente: Daniel Gonzales. basado en Univariate Distribution Relationships (Lawrence M. LEEMIS and Jacquelyn T.\nEn la presente imagen se pueden apreciar las relaciones de los diferentes modelos de distribución. Con rescpecto al modelo de distribución binomial se puede apreciar como se relaciona paralelamente con Bernoulli, directamente con el modleo de distribución Normal, Poisson y con el Beta Binomial, y se basan de ella los modelos de distribución Hipergeométricos, Hipergeométrico Negativo, y Polya.\nReferencias Bibliográficas\nhttps://dgonxalex80.github.io/pye20222/recurso303.html\nhttps://es.slideshare.net/EduardoGrimaldo/distribucion-binomial-35679322\nhttps://r.search.yahoo.com/_ylt=AwrNZygN3DVj8_gJ1PtXNyoA;_ylu=Y29sbwNiZjEEcG9zAzQEdnRpZANMT0NVSTA1NENfMQRzZWMDc3I-/RV=2/RE=1664502926/RO=10/RU=https%3a%2f%2friunet.upv.es%2fbitstream%2fhandle%2f10251%2f7936%2fDistribucion%2520binomial.pdf%3fsequence%3d3/RK=2/RS=DnN.VPveXIEfxH_C9wf_Afqlez0-\nhttps://matemovil.com/distribucion-binomial-ejercicios-resueltos/\nhttps://es.slideshare.net/yessica-mora/distribucion-binomial-35866629\n\n\n\n",
+    "preview": "posts/2022-09-30-articulo-24-01/Image3Binom.jpg",
+    "last_modified": "2022-10-03T10:37:54-05:00",
     "input_file": {}
   },
   {
@@ -387,24 +404,7 @@
     "categories": [],
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-09-30T23:37:03-05:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2022-09-30-articulo-24-01/",
-    "title": "articulo-24-01",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Santiago\tRuiz Calero",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:37:08-05:00",
+    "last_modified": "2022-10-03T10:30:22-05:00",
     "input_file": {}
   },
   {
@@ -422,23 +422,6 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
     "last_modified": "2022-09-30T23:37:13-05:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2022-09-30-articulo-26-01/",
-    "title": "articulo-26-01",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Jean\tVasquez Pinilla",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:37:17-05:00",
     "input_file": {}
   },
   {
@@ -626,6 +609,23 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
     "last_modified": "2022-09-30T23:39:29-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-09-30-articulo-26-01/",
+    "title": "Modelo de distribución binomial",
+    "description": "En este artículo hablaremos del modelo binomial, su origen, sus caracteristicas más generales y como este toma lugar en la investigación de diversas areas de estudio, como la biología por ejemplo. Este artículo es realizado en el marco de la materia de probabilidad y estadistica, como parte de la actividad 331 acerca de los modelos de distribución.",
+    "author": [
+      {
+        "name": "Jean Michael Vasquez Pinilla",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-26",
+    "categories": [],
+    "contents": "\nOrigen del modelo binomial\nLa distribución binomial fue desarrollada por Jakob Bernoulli (Suiza,1654‐1705) y es la principal distribución de probabilidad discreta para variables dicotómicas, es decir, que sólo pueden tomar dos posibles resultados. Este modelo es una variación del modelo de Bernoulli, donde se usa mas de un experimento para obtener los resultados deseados, a diferencia del modelo de Bernoulli, que usa un unico experimento. En pocas palabras, el modelo binomial es una generalización del modelo de Bernoulli.\n\nCaracteristicas del modelo binomial\nDescribe datos discretos, resultantes de un experimento denominado proceso de Bernoulli en honor del matemático suizo Jacob Bernoulli. es una distribución de probabilidad discreta que cuenta el número de éxitos en una secuencia de {n}n ensayos de Bernoulli independientes entre sí con una probabilidad fija {p}p de ocurrencia de éxito entre los ensayos. Un experimento de Bernoulli se caracteriza por ser dicotómico, esto es, solo dos resultados son posibles, a uno de estos se le denomina “éxito” y tiene una probabilidad de ocurrencia {p}p y al otro se le denomina “fracaso” y tiene una probabilidad {q=1-p}{q=1-p}.\nPor lo tanto, la distribución binomial se entiende como una serie de pruebas o ensayos en la que solo podemos tener 2 resultados (éxito o fracaso), siendo el éxito nuestra variable aleatoria.\n\nLa respectiva grafica de la distribución binomial es esta:\n\nEntre las diversas propiedades del modelo de distribución binomial encontramos:\nSi {X}X es una variable aleatoria discreta tal que {X (n,p)}{X (n,p)} entonces\n\nLa primera de ellas es fácil de demostrar, por definición de Esperanza\n\nel primer término de la suma, es decir, para {x=0}x=0 el término vale cero por lo que podemos iniciar la suma en {x=1}{x=1}\n\nDado que\n\npara {x}{x}.\nReemplazando lo anterior en la expresión de { [X]}{ [X]} obtenemos\n\nHaciendo el cambio de índice {k=x-1}{k=x-1} obtenemos\n\nFinalmente por la fórmula de Newton (Teorema del binomio)\n\nObtenemos\n\nEjemplo del modelo binomial\n\nUso de este modelo en la biología\nComo lo es por ejemplo, en el caso de la biología, el modelo binomial sirve para conocer las probabilidades de exito de distintos procesos naturales, procesos tales como la supervivencia de la camada completa de aguiluchos en un nido de aguilas arpías, donde la variable de exito es si todas las crias sobreviven, caso contrario si no toda la camada sobrevive, siendo posible hacer inferencias acerca de la población y si es necesario tomar medidas para la proteccion de dicha especie.\n\n¿Cómo se relaciona con otros modelos?\n\nEl modelo de distribución binomal está estrechamente relacionado con el modelo de Bernoulli, como mencioné anteriormente, pero tambien guarda relación con el modelo normal:\n\ny el modelo hipergeometrico:\n\nWebgrafía y bibliografía\nhttps://riunet.upv.es/bitstream/handle/10251/7936/Distribucion%20binomial.pdf\nhttps://es.wikipedia.org/wiki/Distribuci%C3%B3n_binomial\nhttp://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0123-59232013000300012\n\n\n\n",
+    "preview": "posts/2022-09-30-articulo-26-01/R.png",
+    "last_modified": "2022-10-03T10:27:51-05:00",
     "input_file": {}
   }
 ]
