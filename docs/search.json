@@ -5,7 +5,7 @@
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-10-03T11:10:45-05:00"
+      "last_modified": "2022-10-03T11:46:04-05:00"
     },
     {
       "path": "index.html",
@@ -13,7 +13,7 @@
       "description": "Blog Modelos de los de probabilidad estadísticos!   \nElaborado por los estudiantes de los grupos A y C \n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-10-03T11:10:45-05:00"
+      "last_modified": "2022-10-03T11:46:05-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
