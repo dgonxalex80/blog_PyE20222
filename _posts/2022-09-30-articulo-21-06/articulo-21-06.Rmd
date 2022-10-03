@@ -1,21 +1,85 @@
 ---
-title: "articulo-21-06"
-description: |
-  A short description of the post.
-author: "Daniel\tIzquierdo Cabrera"
-date: 2022-09-30
+title: "Distribución uniforme"
+description: 
+  En este articulo se expondrán las principales caracteristicas de la distribucion estadistica uniforme.
+author:
+  - name: Daniel Izquierdo Cabrera
+date: 2022-09-26
+preview: maxresdefault.png
 output:
   distill::distill_article:
     self_contained: false
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# Definición:
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+La distribución o modelo uniforme puede considerarse como proveniente de un proceso de extracción aleatoria .El planteamiento radica en el hecho de que la probabilidad se distribuye uniformemente a lo largo de un intervalo .
 
+La distribución uniforme es aquella que puede tomar cualquier valor dentro de un
+intervalo, todos ellos con la misma probabilidad, se le llama continua porque puede tomar cualquier valor y no únicamente un número determinado (como ocurre en las distribuciones discretas).
+Esta distribucion hace referencia a una variable aleatoria que unicamente puede tomar valores comprendidos entre dos extremos a y b, por ende todos sus intervalos de una misma longitud (dentro de (a y b)) poseen la misma probabilidad 
+También puede expresarse como el modelo probabilístico correspondiente a tomar un número al azar dentro de un intervalo (a, b).
 
+La distribución es a menudo escrita en forma abreviada como U(a,b).
+
+# Características principales.
+
+- Función de densidad:
+
+Densidad para X-> U[a, b] sea:
+![](https://www.uv.es/ceaces/base/modelos%20de%20probabilidad/Image326.gif){width=14%} para X ∈ (a,b)
+
+Grafica de la funcion de densidad:
+
+![](https://www.uv.es/ceaces/base/modelos%20de%20probabilidad/Image12.gif){width=50%}
+
+- Función de distribución:
+
+![](https://www.uv.es/ceaces/base/modelos%20de%20probabilidad/Image327.gif){width=50%}
+
+Representación gráfica de la función:
+
+![](https://www.uv.es/ceaces/base/modelos%20de%20probabilidad/Image13.gif){width=46%}
+
+- La media está dada por la función: 
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/a0c6ff023592e2451ed1a49723bbc7c611dad09f){width=20%}
+
+- La varianza está dada por la función: 
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/facd1e84d929b8b6473d45107810f995ada7008e){width=25%}
+
+# Ejemplo del modelo uniforme 
+
+Un reloj de manecillas se detuvo en un punto que no sabemos. Determine la probabilidad de que se halla detenido en los primeros 25 minutos luego de señalar la hora en punto.
+
+Solucion:
+
+Interalo [0,60]
+
+F(x )= 1/(60-0)  = 1/60
+
+P(x) = P(0≤x≤25) = integral [0,25] 1/60 dx = 5/12 
+
+# Aplicación del modelo:
+
+La Distribución Uniforme Continua es una herramienta muy útil en el estudio y cálculode la probabilidad de hipótesis y problemas de simulación estadística y fenómenos quepresentan regularidad de aparecimiento.
+
+# Relación entre distribuciones nivariadas:
+
+```{r, echo=FALSE, out.width="50%", fig.align = "left"}
+# knitr::include_graphics("relacion.png")
+
+```
+El modelo uniforme se relaciona con el modelo uniforme y estandar y con kolmogorov-smirnov
+
+# Referencias:
+ - https://www.uv.es/ceaces/base/modelos%20de%20probabilidad/uniforme.htm#:~:text=La%20distribuci%C3%B3n%20o%20modelo%20uniforme,lo%20largo%20de%20un%20intervalo%20. 
+ - https://es.wikipedia.org/wiki/Distribuci%C3%B3n_uniforme_continua
+ - http://probabilidadyestadisticaequipo5.blogspot.com/2015/05/practica-3-distribucion-uniforme.html
+ - https://www.stat.rice.edu/~dobelman/courses/texts/leemis.distributions.2008amstat.pdf
+ - coursehero.com/file/39117740/51-Distribucion-Uniforme-Continua-Erick-Alejandro-Gonzalez-Hernandezdocx/

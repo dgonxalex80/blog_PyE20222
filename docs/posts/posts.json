@@ -357,23 +357,6 @@
     "input_file": {}
   },
   {
-    "path": "posts/2022-09-30-articulo-21-06/",
-    "title": "articulo-21-06",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Daniel\tIzquierdo Cabrera",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:36:52-05:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2022-09-30-articulo-22-15/",
     "title": "articulo-22-15",
     "description": "A short description of the post.",
@@ -609,6 +592,23 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
     "last_modified": "2022-09-30T23:39:29-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-09-30-articulo-21-06/",
+    "title": "Distribución uniforme",
+    "description": "En este articulo se expondrán las principales caracteristicas de la distribucion estadistica uniforme.",
+    "author": [
+      {
+        "name": "Daniel Izquierdo Cabrera",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-26",
+    "categories": [],
+    "contents": "\nDefinición:\nLa distribución o modelo uniforme puede considerarse como proveniente de un proceso de extracción aleatoria .El planteamiento radica en el hecho de que la probabilidad se distribuye uniformemente a lo largo de un intervalo .\nLa distribución uniforme es aquella que puede tomar cualquier valor dentro de un\nintervalo, todos ellos con la misma probabilidad, se le llama continua porque puede tomar cualquier valor y no únicamente un número determinado (como ocurre en las distribuciones discretas).\nEsta distribucion hace referencia a una variable aleatoria que unicamente puede tomar valores comprendidos entre dos extremos a y b, por ende todos sus intervalos de una misma longitud (dentro de (a y b)) poseen la misma probabilidad\nTambién puede expresarse como el modelo probabilístico correspondiente a tomar un número al azar dentro de un intervalo (a, b).\nLa distribución es a menudo escrita en forma abreviada como U(a,b).\nCaracterísticas principales.\nFunción de densidad:\nDensidad para X-> U[a, b] sea:\n para X ∈ (a,b)\nGrafica de la funcion de densidad:\n\nFunción de distribución:\n\nRepresentación gráfica de la función:\n\nLa media está dada por la función:\n\nLa varianza está dada por la función:\n\nEjemplo del modelo uniforme\nUn reloj de manecillas se detuvo en un punto que no sabemos. Determine la probabilidad de que se halla detenido en los primeros 25 minutos luego de señalar la hora en punto.\nSolucion:\nInteralo [0,60]\nF(x )= 1/(60-0) = 1/60\nP(x) = P(0≤x≤25) = integral [0,25] 1/60 dx = 5/12\nAplicación del modelo:\nLa Distribución Uniforme Continua es una herramienta muy útil en el estudio y cálculode la probabilidad de hipótesis y problemas de simulación estadística y fenómenos quepresentan regularidad de aparecimiento.\nRelación entre distribuciones nivariadas:\n\n\n\nEl modelo uniforme se relaciona con el modelo uniforme y estandar y con kolmogorov-smirnov\nReferencias:\nhttps://www.uv.es/ceaces/base/modelos%20de%20probabilidad/uniforme.htm#:~:text=La%20distribuci%C3%B3n%20o%20modelo%20uniforme,lo%20largo%20de%20un%20intervalo%20.\nhttps://es.wikipedia.org/wiki/Distribuci%C3%B3n_uniforme_continua\nhttp://probabilidadyestadisticaequipo5.blogspot.com/2015/05/practica-3-distribucion-uniforme.html\nhttps://www.stat.rice.edu/~dobelman/courses/texts/leemis.distributions.2008amstat.pdf\ncoursehero.com/file/39117740/51-Distribucion-Uniforme-Continua-Erick-Alejandro-Gonzalez-Hernandezdocx/\n\n\n\n",
+    "preview": "posts/2022-09-30-articulo-21-06/maxresdefault.png",
+    "last_modified": "2022-10-03T11:10:15-05:00",
     "input_file": {}
   },
   {
