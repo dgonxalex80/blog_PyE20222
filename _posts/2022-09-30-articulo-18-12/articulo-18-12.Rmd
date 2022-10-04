@@ -1,21 +1,181 @@
 ---
-title: "articulo-18-12"
-description: |
-  A short description of the post.
-author: "Dana\tTorres Martinez"
-date: 2022-09-30
+title: "DISTRIBUCIÓN CAUCHY"
+
+ 
+description: | 
+ En el presente artículo se llevo a cabo una busqueda profunda de manera breve y concreta respecto a la distribución de Cauchy-Lorentz, la cual es una distribución de probabilidad continua. El objetivo del apartado es proporcionar al leedor información de las  características principales de la distribución de Cauchy, con el fin de que su compresión sea sencilla, por tal motivo, se realiza una indagación histórica, una descrición de sus fundamentos teóricos, para este punto se complementa con un ejemplo especifico y de fácil comprensión, por último se plantean algunas aplicaciones en la cotidianidad para la distribución mencionada anteriormente. 
+ 
+author:
+  - name: DANA CHELSY TORRES MARTÍNEZ
+date: 2022-09-28
+preview: CAUCHY.jpeg
 output:
   distill::distill_article:
     self_contained: false
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+<div style="text-align: justify">
 
 
+### ORIGEN DE LA DISTRIBUCIÓN DE CAUCHY
+
+La distribución Cauchy-Lorentz, llamada en honor a Augustin Cauchy y Hendrik Lorentz, es una distribución de probabilidad continua. Es conocida como la distribución de Cauchy y en el ámbito de la física se conoce como la distribución de Lorentz, la función Lorentziana o la distribución de Breit-Wigner. Su importancia en la física es dada por ser la solución de la ecuación diferencial que describe la resonancia forzada. En espectroscopia describe la forma de las líneas espectrales que son ampliadas por diversos mecanismos, en particular, el mecanismo de ensanchamiento por colisión.
+
+Las funciones con la forma de la función de densidad de la distribución de Cauchy fueron estudiadas por matemáticos en el siglo XVII, pero en un contexto diferente y bajo el título de la bruja de Agnesi. A pesar de su nombre, el primer análisis explícito de las propiedades de la distribución de Cauchy fue publicado por el matemático francés Poisson en 1824, y Cauchy solo se asoció con él durante una controversia académica en 1853. [2] Como tal, el nombre de la distribución es un caso de la Ley de Eponimia de Stigler . Poisson señaló que si se tomaba la media de las observaciones que siguieron a dicha distribución, el error medio no convergería a ningún número finito. Como tal, el uso de Laplace del Teorema del límite central con tal distribución fue inapropiado, ya que asumió una media y una varianza finitas. A pesar de esto, Poisson no consideró el tema como importante, en contraste con Bienaymé , quien iba a involucrar a Cauchy en una larga disputa sobre el asunto.
+
+La distribución de Cauchy se utiliza a menudo en estadística como el ejemplo canónico de una distribución " patológica ", ya que tanto su valor esperado como su varianza no están definidos (pero consulte la sección Explicación de momentos indefinidos a continuación). La distribución de Cauchy no tiene momentos finitos de orden mayor o igual a uno; sólo existen momentos absolutos fraccionarios. [1] La distribución de Cauchy no tiene una función generadora de momento.
+
+En matemáticas , está estrechamente relacionado con el núcleo de Poisson, que es la solución fundamental para la ecuación de Laplace en el semiplano superior.
+
+Es una de las pocas distribuciones que es estable y tiene una función de densidad de probabilidad que se puede expresar analíticamente, siendo las otras la distribución normal y la distribución de Lévy.
+
+_Imagen 1: Distribución de Cauchy_
+<div>
+<p style = 'text-align:center;'>
+<img src="https://support.minitab.com/es-mx/minitab/20/media/generated-content/images/Cauchy_normal1.png" alt="JuveYell" width="300px">
+</p>
+</div>
+_Imagen 2: Distribución Normal_
+<div>
+<p style = 'text-align:center;'>
+<img src="https://support.minitab.com/es-mx/minitab/20/media/generated-content/images/Cauchy_normal2.png" alt="JuveYell" width="300px">
+</p>
+</div>
+
+
+
+### CARACTERÍSTICAS  
+
+Lo que hace que la distribución de Cauchy sea interesante es que, aunque sea definida por utilizar el sistema físico de una ruleta aleatoria, una variable aleatoria con una distribución de Cauchy no tiene una función de generación de media, varianza o momento. En esta distribución no existen todos los momentos sobre el origen que se utilizan para definir estos parámetros.
+
+
+_FUNCIÓN DE DENSIDAD DE PROBABILIDAD_
+La distribución de Cauchy tiene la función de densidad de probabilidad
+
+<div>
+<p style = 'text-align:center;'>
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cebade496753f1664a6afd9c260c993023c03b3b" alt="JuveYell" width="300px">
+</p>
+</div>
+
+dónde x_{0}es el parámetro de ubicación, que especifica la ubicación del pico de la distribución, y\gamma es el parámetro de escala que especifica la mitad del ancho a la mitad del máximo (HWHM), alternativamente 2\gamma es de ancho completo a la mitad del máximo (FWHM).
+
+\gamma también es igual a la mitad del rango intercuartílico y, a veces, se denomina error probable . Augustin-Louis Cauchy explotó tal función de densidad en 1827 con un parámetro de escala infinitesimal, definiendo lo que ahora se llamaría una función delta de Dirac.
+
+El valor máximo o amplitud de Cauchy es 
+
+<div>
+<p style = 'text-align:center;'>
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68ed88d8bb3e175ecda69012549a10c9b0874ebf" alt="JuveYell" width="90px">
+</p>
+</div>, situado en x=x_{0}
+
+A veces es conveniente expresar en términos del parámetro complejo {\displaystyle \psi =x_{0}+i\gamma }
+
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/adcabcb4eaf054f77ea6675bfcd4c27aceebf14b"alt="JuveYell" width="300px">
+</p>
+</div>
+
+
+El caso especial cuando x_{0}=0 y \gamma =1se llama distribución de Cauchy estándar con la función de densidad de probabilidad: 
+
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/0f3550c97c02f55d61010db6a38b2ef058a888e9"alt="JuveYell" width="300px">
+</p>
+</div>
+
+En física, a menudo se usa una función Lorentziana de tres parámetros:
+
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/ef75c5f31667a907f64963eb478d03f33f8374d2"alt="JuveYell" width="300px">
+</p>
+</div>
+
+Dónde I es la altura del pico. La función Lorentziana de tres parámetros indicada no es, en general, una función de densidad de probabilidad, ya que no se integra a 1, excepto en el caso especial donde:
+
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/a422050e42a64cb349c2a34b6b468f2187951bc2"alt="JuveYell" width="300px">
+</p>
+</div>
+
+_FUNCIÓN DE DISTRIBUCIÓN ACUMULATIVA_
+La función de distribución acumulativa de la distribución de Cauchy es:
+
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/c8d6aa165b3df5d0a44e4afe1245cd88fdf9b640"alt="JuveYell" width="300px">
+</p>
+</div>
+
+y la función de cuantiles ( CDF inversa ) de la distribución de Cauchy eS
+
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/42c17241be79f1edbb111b82fc9a86ad55c9fd37"alt="JuveYell" width="300px">
+</p>
+</div>
+
+_FUNCIÓN DE DISTRIBUCIÓN ACUMULADA_
+La función de distribución acumulativa de la distribución de Cauchy es:
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/c8d6aa165b3df5d0a44e4afe1245cd88fdf9b640="JuveYell" width="300px">
+</p>
+</div>
+y la función de cuantiles ( CDF inversa ) de la distribución de Cauchy es
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/42c17241be79f1edbb111b82fc9a86ad55c9fd37" ="JuveYell" width="300px">
+</p>
+</div>
+
+### EJEMPLO: DISTRIBUCIÓN DE CAUCHY
+
+Muestre la definición de la distribución de Cauchy:
+
+
+
+<div>
+<p style = 'text-align:center;'>
+<img src= "https://support.ptc.com/help/mathcad/r8.0/es/PTC_Mathcad_Help/images/example_cauchy_functions0.png" = "JuveYell" width="300px">
+</p>
+</div>
+
+Donde:
+◦l es el parámetro de ubicación (mean)
+◦s es el parámetro de escala (raíz cuadrada de la varianza), s > 0
+
+
+### OCURRENCIA Y APLICACIONES
+
+* En espectroscopía , la distribución de Cauchy describe la forma de las líneas espectrales que están sujetas a un ensanchamiento homogéneo en el que todos los átomos interactúan de la misma manera con el rango de frecuencia contenido en la forma de la línea. Muchos mecanismos provocan un ensanchamiento homogéneo, sobre todo el ensanchamiento de colisiones . El ensanchamiento natural o de por vida también da lugar a una forma de línea descrita por la distribución de Cauchy.
+
+* Las aplicaciones de la distribución de Cauchy o su transformación se pueden encontrar en campos que trabajan con crecimiento exponencial. Un artículo de 1958 de White [30] derivó el estadístico de prueba para estimadores de\hat{\beta} para la ecuación {\displaystyle x_{t+1}=\beta {x}_{t}+\varepsilon _{t+1},\beta >1} y donde el estimador de máxima verosimilitud se encuentra usando mínimos cuadrados ordinarios mostró que la distribución muestral del estadístico es la distribución de Cauchy.
+
+* Distribución de Cauchy acumulada ajustada a las precipitaciones máximas de un día usando CumFreq , ver también ajuste de distribución La distribución de Cauchy es a menudo la distribución de observaciones de objetos que giran. La referencia clásica para esto se llama el problema del faro de Gull y, como en la sección anterior, la distribución de Breit-Wigner en la física de partículas.
+
+* En hidrología, la distribución de Cauchy se aplica a eventos extremos como las precipitaciones máximas anuales de un día y las descargas de los ríos. La imagen azul ilustra un ejemplo de cómo ajustar la distribución de Cauchy a las precipitaciones máximas mensuales clasificadas en un día, mostrando también el cinturón de confianza del 90% basado en la distribución binomial . Los datos de lluvia se representan mediante la representación de posiciones como parte del análisis de frecuencia acumulada .
+La expresión de la parte imaginaria de la permitividad eléctrica compleja según el modelo de Lorentz es una distribución de Cauchy.
+Como distribución adicional para modelar colas gruesas en finanzas computacionales , las distribuciones de Cauchy pueden usarse para modelar VAR ( valor en riesgo ) produciendo una probabilidad mucho mayor de riesgo extremo que la Distribución Gaussiana 
+
+### REFERENCIAS
+
+[1] https://hmong.es/wiki/Cauchy_distribution
+
+[2] "Distribución de Cauchy" , Enciclopedia de Matemáticas , EMS Press , 2001 [1994]
+
+[3] Usos más antiguos: la entrada sobre la distribución de Cauchy tiene información histórica
+
+[4] Weisstein, Eric W. "Distribución Cauchy" . MathWorld
+
+[5] Biblioteca científica GNU - Manual de referencia
+
+[6] Razones de variables normales por George Marsaglia

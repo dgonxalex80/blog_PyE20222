@@ -1,5 +1,39 @@
 [
   {
+    "path": "posts/2022-09-30-articulo-07-16/",
+    "title": "DISTRIBUCIÓN LOGÍSTICA",
+    "description": "En el siguiente artículo hablaremos sobre una distribución de probabilidad continua cuya función de distribución es la función logística.",
+    "author": [
+      {
+        "name": "Camila Olarte",
+        "url": {}
+      }
+    ],
+    "date": "2022-10-04",
+    "categories": [],
+    "contents": "\nOrigen\nPierre François Verhulst desarrolló una investigación sobre crecimiento poblacional que registró en tres distintos artículos entre 1838 y 1847 donde, ajustando el modelo de crecimiento exponencial desarrollado por Malthus, logró expresar una curva lo suficientemente adecuada para describir el crecimiento de las poblaciones, estudio de la mortalidad, y en general, los procesos de crecimiento que experimentan estados de saturación.\nLa razón que lo llevó a modelar un reemplanteamiento sobre la formula es debido a que el modelado de Malthus terminaba siendo contradictorio hacia el crecimiento poblacional donde se sabe que no es infinito y posee límites dependiendo de diferentes factores, es por ello que Verhulst introduce un término de “freno no lineal” \\(-\\gamma (p(t))^2\\) siendo \\(-\\gamma >0\\) y de esta forma logró explicar el creccimiento poblacional.\n\nCaracterísticas principales\nLos parámetros asociados a esta distribución son situación (a) y escala (b). Su función de densidad es simétrica respecto al parámetro a y presenta un perfil más apuntado que el de la distribución normal con la misma media y desviación estándar (distribución leptocúrtica).\nEl problema de valor inicial expresa condiciones para la ecuacion donde se debe tener en cuenta también el comportamiento a largo plazo que puedan presentar las variables.\n\nPara determinarlo debemos al asumir la existencia del límite que se obtiene por este comportamiento, para ello debemos tener claro que los resultados no pueden tender al infinito (L ≠ ∞) y descartar los resultados de una población que esté a punto de extinguirse ( L = 0). Si tomamos los límites cuando t -> ∞ en la ecuación anterios, tenemos (sin conocer la solución explícita):\n\nAl tener en cuenta el análisis de límite a largo plazo por el comportamiento del modelo nos ofrece una nueva formulación del modelo planteado por Malthus. En esta podemos observar el coeficiente de crecimiento relativo (donde Malthus regista como \\(\\alpha\\)) pasa a ser \\(\\alpha(t)=\\gamma(L-p(t))\\). Reconociendo que, “el coeficiente es negativo (positivo) siempre que la población en cada instante t (no) supere al límite máximo L que se puede alcanzar a largo plazo”\n\nComo conclusiones tenemos que las poblaciones disminuyen cuando estas llegan a su máximo límite de población, caso contrario en el que si no se alcanza a llegar al límite sigue en crecimiento.\n\nEjemplo\nEl crecimiento relativo anual (%) de la población de un determinado país sigue una distribución logística de parámetro de posición 1 y de escala 2. Calcular la probabilidad de que el crecimiento en un año determinado sea superior al 5% y representar la función de densidad.\nDatos:\nDistribución logística (a,b)\nParámetros,\na: situación.\nb: escala.\n## Resultados:\n\n## Gráficos:\n\n\n\nLa probabilidad de que la población tenga un crecimiento superior al 5% es del orden de\n0,12.\nRelaciones entre distribuciones nivariadas\nLa realción que presenta este modelo es un reajustamiento sobre el Logaritmo logístico\n# Aplicaciones en la Biología\nEste modelo permite construir en el campo de la biología estudios de crecimiento celular como en las levaduras, y también desarrollar bioensayos y representar curvas de dosis-respuesta.\nReferencias bibliográficas\nhttps://riunet.upv.es/bitstream/handle/10251/30891/modelo%20logistico.pdf\nhttps://www.sergas.es/Saude-publica/Documents/1899/Ayuda_Epidat_4_Distribuciones_de_probabilidad_Octubre2014.pdf\nhttps://www.fuenterrebollo.com/Aeronautica2016/fundamentos-distribuciones.pdf\n\n\n\n",
+    "preview": "posts/2022-09-30-articulo-07-16/gifcamila.gif",
+    "last_modified": "2022-10-04T13:44:25-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-09-30-articulo-14-15/",
+    "title": "DISTRIBUCIÓN GUMBELL",
+    "description": "Artículo sibre la Distribución Gumbel",
+    "author": [
+      {
+        "name": "Santiago Valencia Amaya",
+        "url": "https://www.instagram.com/amaya0304_/"
+      }
+    ],
+    "date": "2022-10-04",
+    "categories": [],
+    "contents": "\n¿Quien fué E. J. Gumbel?\nEmil Julius Gumbel (nacido el 18 de julio de 1891 en Munich; fallecido el 10 de septiembre de 1966 en Nueva York) fue matemático, activista político y pacifista. Era judío y huyó de Alemania en 1933, año en que se le privó de la nacionalidad alemana. Tuvo posteriormente las nacionalidades francesa y estadounidense. Enseñó en la Universidad de Heidelberg (Alemania), en la Sorbona y en la Universidad de Lyon (Francia), y en la New School for Social Research de Nueva York y en la Universidad de Columbia (Estados Unidos).\n\n\n\nContexto Modelo Gumbel\nEn teoría de probabilidad y estadística la distribución de Gumbel es utilizada para modelar la distribución del máximo (o el mínimo), por lo que se usa para calcular valores extremos. Por ejemplo, sería muy útil para representar la distribución del máximo nivel de un río a partir de los datos de niveles máximos durante 10 años. Es por esto que resulta muy útil para predecir terremotos, inundaciones o cualquier otro desastre natural que pueda ocurrir.\nLa aplicabilidad potencial de la distribución de Gumbel para representar los máximos se debe a la teoría de valores extremos que indica que es probable que sea útil si la muestra de datos tiene una distribución normal o exponencial.\nEsta distribución podría usarse para representar la distribución del nivel máximo de un río en un año en particular si hubiera una lista de valores máximos para los últimos diez años. Es útil para predecir la posibilidad de que ocurra un terremoto extremo, una inundación u otro desastre natural.\nOrigen del modelo matematico\nLa primera distribución límite fue dada por Frechet en 1926, la segunda por Weibull a mediados de 1930 y por ultimo Gumbel en 1958, quien tuvo principal interes teorico y practico de la ultima distribucion recibiendo ası, su nombre, presentandola en el libro Statistics of extremes\nCaracteristicas\nLa moda es μ, mientras que la mediana es \\(\\mu -\\beta \\ln \\left(\\ln 2\\right)\\), y la media viene dada por \\({\\displaystyle \\operatorname {E} (X)=\\mu +\\gamma \\beta }\\), El apoyo por \\(x \\in \\mathbb R\\), PDF \\(\\frac{1}{\\beta} e ^ {- (z + e ^ {- z})}\\).\ndónde es la constante de Euler-Mascheroni\nLa desviación estándar \\(\\sigma\\) es \\({\\displaystyle \\beta \\pi /{\\sqrt {6}}}\\) por eso \\({\\displaystyle \\beta = \\sigma {\\sqrt {6}}/\\pi \\approx 0.78\\sigma .}\\)\nEn el modo, donde \\({\\displaystyle x=\\mu }\\), El valor de \\({\\displaystyle F(x;\\mu ,\\beta )}\\) se convierte en \\({\\displaystyle e^{-1}\\approx 0.37}\\) , independientemente del valor de \\({\\displaystyle \\beta .}\\)\nEjemplo\nCuando \\(\\mu\\) = 0 y \\(\\beta\\) = 1, la distribución se denomina Distribución estándar de Gumbel (mínimo). El PDF se convierte en: \\(\\ e^{x} \\ e^{-e^{x}}\\)\nAplicaciones\nGumbel ha demostrado que el valor máximo (o estadístico de último orden ) en una muestra de una variable aleatoria que sigue una distribución exponencial menos el logaritmo natural del tamaño de la muestra se acerca más a la distribución de Gumbel al aumentar el tamaño de la muestra.\nEn hidrología , por lo tanto, la distribución de Gumbel se utiliza para analizar variables tales como los valores máximos mensuales y anuales de las precipitaciones diarias y los volúmenes de descarga de los ríos, y también para describir las sequías.\nGumbel también ha demostrado que el estimador \\(\\frac{r}{\\ n+1}\\) para la probabilidad de un evento, donde r es el número de rango del valor observado en la serie de datos yn es el número total de observaciones, es un estimador insesgado de la probabilidad acumulada en torno a la moda de la distribución. Por lo tanto, este estimador se utiliza a menudo como posición de trazado .\nEn teoría de números , la distribución de Gumbel se aproxima al número de términos en una partición aleatoria de un entero, así como los tamaños ajustados por tendencia de los espacios primos máximos y los espacios máximos entre constelaciones primarias .\nEn el aprendizaje automático , la distribución de Gumbel a veces se emplea para generar muestras a partir de la distribución categórica.\nBibliografia\nGumbel, EJ (1935), “Les valeurs extrêmes des distributions statistiques” (PDF) , Annales de l’Institut Henri Poincaré , 5 (2): 115-158\nGumbel EJ (1941). “El período de retorno de los flujos de inundaciones”. The Annals of Mathematical Statistics, 12, 163-190.\nArticle title: Distribución de Gumbel DefinicionesyPropiedades\nWebsite title: Hmong.es\nURL: https://hmong.es/wiki/Gumbel_distribution\n\n\n\n",
+    "preview": "posts/2022-09-30-articulo-14-15/gumbel.jpg",
+    "last_modified": "2022-10-04T13:32:33-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-09-30-articulo-08-04/",
     "title": "Distribución geométrica o de pascal",
     "description": "Principales caracteristicas de la distribución geométrica o de pascal.",
@@ -170,23 +204,6 @@
     "input_file": {}
   },
   {
-    "path": "posts/2022-09-30-articulo-07-16/",
-    "title": "articulo-07-16",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Camila\tOlarte Lopez",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:31:20-05:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2022-09-30-articulo-09-16/",
     "title": "articulo-09-16",
     "description": "A short description of the post.",
@@ -255,23 +272,6 @@
     "input_file": {}
   },
   {
-    "path": "posts/2022-09-30-articulo-14-15/",
-    "title": "articulo-14-15",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Santiago\tValencia Amaya",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:34:55-05:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2022-09-30-articulo-15-01/",
     "title": "articulo-15-01",
     "description": "A short description of the post.",
@@ -303,23 +303,6 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
     "last_modified": "2022-09-30T23:35:04-05:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/2022-09-30-articulo-18-12/",
-    "title": "articulo-18-12",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Dana\tTorres Martinez",
-        "url": {}
-      }
-    ],
-    "date": "2022-09-30",
-    "categories": [],
-    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
-    "preview": {},
-    "last_modified": "2022-09-30T23:35:15-05:00",
     "input_file": {}
   },
   {
@@ -575,6 +558,23 @@
     "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
     "last_modified": "2022-09-30T23:39:29-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-09-30-articulo-18-12/",
+    "title": "DISTRIBUCIÓN CAUCHY",
+    "description": "En el presente artículo se llevo a cabo una busqueda profunda de manera breve y concreta respecto a la distribución de Cauchy-Lorentz, la cual es una distribución de probabilidad continua. El objetivo del apartado es proporcionar al leedor información de las  características principales de la distribución de Cauchy, con el fin de que su compresión sea sencilla, por tal motivo, se realiza una indagación histórica, una descrición de sus fundamentos teóricos, para este punto se complementa con un ejemplo especifico y de fácil comprensión, por último se plantean algunas aplicaciones en la cotidianidad para la distribución mencionada anteriormente.",
+    "author": [
+      {
+        "name": "DANA CHELSY TORRES MARTÍNEZ",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-28",
+    "categories": [],
+    "contents": "\n\n\n\nORIGEN DE LA DISTRIBUCIÓN DE CAUCHY\nLa distribución Cauchy-Lorentz, llamada en honor a Augustin Cauchy y Hendrik Lorentz, es una distribución de probabilidad continua. Es conocida como la distribución de Cauchy y en el ámbito de la física se conoce como la distribución de Lorentz, la función Lorentziana o la distribución de Breit-Wigner. Su importancia en la física es dada por ser la solución de la ecuación diferencial que describe la resonancia forzada. En espectroscopia describe la forma de las líneas espectrales que son ampliadas por diversos mecanismos, en particular, el mecanismo de ensanchamiento por colisión.\nLas funciones con la forma de la función de densidad de la distribución de Cauchy fueron estudiadas por matemáticos en el siglo XVII, pero en un contexto diferente y bajo el título de la bruja de Agnesi. A pesar de su nombre, el primer análisis explícito de las propiedades de la distribución de Cauchy fue publicado por el matemático francés Poisson en 1824, y Cauchy solo se asoció con él durante una controversia académica en 1853. [2] Como tal, el nombre de la distribución es un caso de la Ley de Eponimia de Stigler . Poisson señaló que si se tomaba la media de las observaciones que siguieron a dicha distribución, el error medio no convergería a ningún número finito. Como tal, el uso de Laplace del Teorema del límite central con tal distribución fue inapropiado, ya que asumió una media y una varianza finitas. A pesar de esto, Poisson no consideró el tema como importante, en contraste con Bienaymé , quien iba a involucrar a Cauchy en una larga disputa sobre el asunto.\nLa distribución de Cauchy se utiliza a menudo en estadística como el ejemplo canónico de una distribución ” patológica “, ya que tanto su valor esperado como su varianza no están definidos (pero consulte la sección Explicación de momentos indefinidos a continuación). La distribución de Cauchy no tiene momentos finitos de orden mayor o igual a uno; sólo existen momentos absolutos fraccionarios. [1] La distribución de Cauchy no tiene una función generadora de momento.\nEn matemáticas , está estrechamente relacionado con el núcleo de Poisson, que es la solución fundamental para la ecuación de Laplace en el semiplano superior.\nEs una de las pocas distribuciones que es estable y tiene una función de densidad de probabilidad que se puede expresar analíticamente, siendo las otras la distribución normal y la distribución de Lévy.\nImagen 1: Distribución de Cauchy\n\n\n\n\nImagen 2: Distribución Normal\n\n\n\n\nCARACTERÍSTICAS\nLo que hace que la distribución de Cauchy sea interesante es que, aunque sea definida por utilizar el sistema físico de una ruleta aleatoria, una variable aleatoria con una distribución de Cauchy no tiene una función de generación de media, varianza o momento. En esta distribución no existen todos los momentos sobre el origen que se utilizan para definir estos parámetros.\nFUNCIÓN DE DENSIDAD DE PROBABILIDAD\nLa distribución de Cauchy tiene la función de densidad de probabilidad\n\n\n\n\ndónde x_{0}es el parámetro de ubicación, que especifica la ubicación del pico de la distribución, yes el parámetro de escala que especifica la mitad del ancho a la mitad del máximo (HWHM), alternativamente 2es de ancho completo a la mitad del máximo (FWHM).\ntambién es igual a la mitad del rango intercuartílico y, a veces, se denomina error probable . Augustin-Louis Cauchy explotó tal función de densidad en 1827 con un parámetro de escala infinitesimal, definiendo lo que ahora se llamaría una función delta de Dirac.\nEl valor máximo o amplitud de Cauchy es\n\n\n\n\n, situado en x=x_{0}\nA veces es conveniente expresar en términos del parámetro complejo {=x_{0}+i}\n\n\n\n\nEl caso especial cuando x_{0}=0 y =1se llama distribución de Cauchy estándar con la función de densidad de probabilidad:\n\n\n\n\nEn física, a menudo se usa una función Lorentziana de tres parámetros:\n\n\n\n\nDónde I es la altura del pico. La función Lorentziana de tres parámetros indicada no es, en general, una función de densidad de probabilidad, ya que no se integra a 1, excepto en el caso especial donde:\n\n\n\n\nFUNCIÓN DE DISTRIBUCIÓN ACUMULATIVA\nLa función de distribución acumulativa de la distribución de Cauchy es:\n\n\n\n\ny la función de cuantiles ( CDF inversa ) de la distribución de Cauchy eS\n\n\n\n\nFUNCIÓN DE DISTRIBUCIÓN ACUMULADA\nLa función de distribución acumulativa de la distribución de Cauchy es:\n\n\n<img src= “https://wikimedia.org/api/rest_v1/media/math/render/svg/c8d6aa165b3df5d0a44e4afe1245cd88fdf9b640=\"JuveYell” width=“300px”>\n\n\ny la función de cuantiles ( CDF inversa ) de la distribución de Cauchy es\n\n\n<img src= “https://wikimedia.org/api/rest_v1/media/math/render/svg/42c17241be79f1edbb111b82fc9a86ad55c9fd37” =“JuveYell” width=“300px”>\n\n\nEJEMPLO: DISTRIBUCIÓN DE CAUCHY\nMuestre la definición de la distribución de Cauchy:\n\n\n<img src= “https://support.ptc.com/help/mathcad/r8.0/es/PTC_Mathcad_Help/images/example_cauchy_functions0.png” = “JuveYell” width=“300px”>\n\n\nDonde:\n◦l es el parámetro de ubicación (mean)\n◦s es el parámetro de escala (raíz cuadrada de la varianza), s > 0\nOCURRENCIA Y APLICACIONES\nEn espectroscopía , la distribución de Cauchy describe la forma de las líneas espectrales que están sujetas a un ensanchamiento homogéneo en el que todos los átomos interactúan de la misma manera con el rango de frecuencia contenido en la forma de la línea. Muchos mecanismos provocan un ensanchamiento homogéneo, sobre todo el ensanchamiento de colisiones . El ensanchamiento natural o de por vida también da lugar a una forma de línea descrita por la distribución de Cauchy.\nLas aplicaciones de la distribución de Cauchy o su transformación se pueden encontrar en campos que trabajan con crecimiento exponencial. Un artículo de 1958 de White [30] derivó el estadístico de prueba para estimadores de para la ecuación {x_{t+1}={t}+{t+1},>1} y donde el estimador de máxima verosimilitud se encuentra usando mínimos cuadrados ordinarios mostró que la distribución muestral del estadístico es la distribución de Cauchy.\nDistribución de Cauchy acumulada ajustada a las precipitaciones máximas de un día usando CumFreq , ver también ajuste de distribución La distribución de Cauchy es a menudo la distribución de observaciones de objetos que giran. La referencia clásica para esto se llama el problema del faro de Gull y, como en la sección anterior, la distribución de Breit-Wigner en la física de partículas.\nEn hidrología, la distribución de Cauchy se aplica a eventos extremos como las precipitaciones máximas anuales de un día y las descargas de los ríos. La imagen azul ilustra un ejemplo de cómo ajustar la distribución de Cauchy a las precipitaciones máximas mensuales clasificadas en un día, mostrando también el cinturón de confianza del 90% basado en la distribución binomial . Los datos de lluvia se representan mediante la representación de posiciones como parte del análisis de frecuencia acumulada .\nLa expresión de la parte imaginaria de la permitividad eléctrica compleja según el modelo de Lorentz es una distribución de Cauchy.\nComo distribución adicional para modelar colas gruesas en finanzas computacionales , las distribuciones de Cauchy pueden usarse para modelar VAR ( valor en riesgo ) produciendo una probabilidad mucho mayor de riesgo extremo que la Distribución Gaussiana\nREFERENCIAS\n[1] https://hmong.es/wiki/Cauchy_distribution\n[2] “Distribución de Cauchy” , Enciclopedia de Matemáticas , EMS Press , 2001 [1994]\n[3] Usos más antiguos: la entrada sobre la distribución de Cauchy tiene información histórica\n[4] Weisstein, Eric W. “Distribución Cauchy” . MathWorld\n[5] Biblioteca científica GNU - Manual de referencia\n[6] Razones de variables normales por George Marsaglia\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "preview": "posts/2022-09-30-articulo-18-12/CAUCHY.jpeg",
+    "last_modified": "2022-10-04T13:35:56-05:00",
     "input_file": {}
   },
   {

@@ -1,21 +1,86 @@
 ---
-title: "articulo-07-16"
+title: "DISTRIBUCIÓN LOGÍSTICA"
 description: |
-  A short description of the post.
-author: "Camila\tOlarte Lopez"
-date: 2022-09-30
-output:
-  distill::distill_article:
-    self_contained: false
+  En el siguiente artículo hablaremos sobre una distribución de probabilidad continua cuya función de distribución es la función logística. 
+author:
+  - name: Camila Olarte 
+date: "`r Sys.Date()`"
+preview: gifcamila.gif
+output: distill::distill_article
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# *Origen*
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Pierre François Verhulst desarrolló una investigación sobre crecimiento poblacional que registró en tres distintos artículos entre 1838 y 1847 donde, ajustando el modelo de crecimiento exponencial desarrollado por Malthus, logró expresar una curva lo suficientemente adecuada para describir el crecimiento de las poblaciones, estudio de la mortalidad, y en general, los procesos de crecimiento que experimentan estados de saturación.
+
+La razón que lo llevó a modelar un reemplanteamiento sobre la formula es debido a que el modelado de Malthus terminaba siendo contradictorio hacia el crecimiento poblacional donde se sabe que no es infinito y posee límites dependiendo de diferentes factores, es por ello que Verhulst introduce un término de "freno no lineal" $-\gamma (p(t))^2$ siendo $-\gamma >0$ y de esta forma logró explicar el creccimiento poblacional.
 
 
+<!-- ![Pierre François y función logística](señorcamila.png) -->
+
+
+# *Características principales*
+
+Los parámetros asociados a esta distribución son situación (a) y escala (b). Su función de densidad es simétrica respecto al parámetro a y presenta un perfil más apuntado que el de la distribución normal con la misma media y desviación estándar (distribución leptocúrtica). 
+
+El problema de valor inicial expresa condiciones para la ecuacion donde se debe tener en cuenta también el comportamiento a largo plazo que puedan presentar las variables.
+
+<!-- ![Ecuación valor inicial](problemacamila.jpg)  -->
+
+Para determinarlo debemos al asumir la existencia del límite que se obtiene por este comportamiento, para ello debemos tener claro que los resultados no pueden tender al infinito (L ≠ ∞) y descartar los resultados de una población que esté a punto de extinguirse ( L = 0). Si tomamos los límites cuando t -> ∞ en la ecuación anterios, tenemos (sin conocer la solución explícita):
+
+<!-- ![Cálculo de comportamiento](comportamientoCami.jpg)  -->
+ Al tener en cuenta el análisis de límite a largo plazo por el comportamiento del modelo nos ofrece una nueva formulación del modelo planteado por Malthus. En esta podemos observar el coeficiente de crecimiento relativo (donde Malthus regista como $\alpha$) pasa a ser $\alpha(t)=\gamma(L-p(t))$. Reconociendo que, "el coeficiente es *negativo* (positivo) siempre que *la población en cada instante t (no) supere al límite máximo L que se puede alcanzar a largo plazo*" 
+ 
+ <!-- ![Reformulación EDO](ReformulaciónCami.jpg)  -->
+ 
+ Como conclusiones tenemos que las poblaciones disminuyen cuando estas llegan a su máximo límite de población, caso contrario en el que si no se alcanza a llegar al límite sigue en crecimiento. 
+ 
+ <!-- ![Conclusiones](CrecimientoCami.jpg)  -->
+ 
+# *Ejemplo*
+
+El crecimiento relativo anual (%) de la población de un determinado país sigue una distribución logística de parámetro de posición 1 y de escala 2. Calcular la probabilidad de que el crecimiento en un año determinado sea superior al 5% y representar la función de densidad.
+
+## Datos:
+
+Distribución logística (a,b)
+Parámetros,
+  a: situación.
+  b: escala.
+## Resultados:
+
+  <!-- ![](ResultadosCami.jpg)  -->
+## Gráficos: 
+
+```{r}
+x = seq(-7.5,10.0)
+y = dlogis(x, location = 1, scale = 2)
+plot(x,y, type = "l", main = "Función de densidad")
+
+x = seq(-7.5,10)
+y = plogis(x, location = 1, scale = 2)
+plot(x,y, type = "l", main = "Función de distribución")
+```
+
+La probabilidad de que la población tenga un crecimiento superior al 5% es del orden de
+0,12.
+
+# Relaciones entre distribuciones nivariadas
+
+La realción que presenta este modelo es un reajustamiento sobre el Logaritmo logístico
+# Aplicaciones en la Biología
+
+Este modelo permite construir en el campo de la biología estudios de crecimiento celular como en las levaduras, y también desarrollar bioensayos y representar curvas de dosis-respuesta. 
+
+# Referencias bibliográficas
+
+https://riunet.upv.es/bitstream/handle/10251/30891/modelo%20logistico.pdf
+
+https://www.sergas.es/Saude-publica/Documents/1899/Ayuda_Epidat_4_Distribuciones_de_probabilidad_Octubre2014.pdf
+
+https://www.fuenterrebollo.com/Aeronautica2016/fundamentos-distribuciones.pdf

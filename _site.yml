@@ -3,6 +3,7 @@ title: "PyE 2022-2"
 description: |
   Blog de Probabilidad y Estadística  2022-2
 output_dir: "docs"
+theme: theme.css
 navbar:
   right:
     - text: "About"

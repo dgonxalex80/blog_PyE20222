@@ -35,3 +35,5 @@ distill::create_post(title= "articulo-34-14",	author = "Heber	Caicedo Garcia")
 distill::create_post(title= "articulo-35-05",	author = "Juan	Marin Hincapie")
 distill::create_post(title= "articulo-36-13",	author = "Isaac	Escobar")
 distill::create_post(title= "articulo-37-08",	author = "Willian David	Chapid")
+
+distill::create_theme(name = "theme", edit = TRUE)
