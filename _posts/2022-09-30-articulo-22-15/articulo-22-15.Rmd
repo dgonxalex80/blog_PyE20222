@@ -1,21 +1,93 @@
 ---
-title: "articulo-22-15"
+title: "Distribuión de Gumbel"
 description: |
-  A short description of the post.
-author: "Jose\tAndrade Vargas"
-date: 2022-09-30
-output:
-  distill::distill_article:
-    self_contained: false
+  Articulo que describe la distribución e probabilidad de Gumbel.
+author:
+  - name: Jose Ricardo Andrade Vargas 
+date: "`r Sys.Date()`"
+preview: https://www2.javerianacali.edu.co/sites/ujc/files/styles/img_node_600_x_300/public/node/announcement/field_image_box/logo_javeriana_cali_0.jpg?itok=I3UO4Iux
+output: distill::distill_article
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# Distribución de Gumbel
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Introducción:
+
+Para hablar de la disribución de Gumbel es importante saber quien fue Julius Gumbel, este personaje fue un importante matematico y economista aleman del siglo XX el cual es reconocido por su trabajo en el area de la estadistica y finalizando la teoria de los valores extremos la cual es la base de su distribución.\
+ <!-- ![Tomado de :https://www.demokratie-geschichte.de/koepfe/2264](gumbel.jpg){width="50%"} -->
+
+Defnición:
+
+Es la distribucion generalizada de valor extremo tipo I. Esta consiste en que la distribución generalizada de valores extremos es la unica distribución limite de los maximos correctamente normalizados de una larga sucesion de variables aleatorias independientes y identicamente distribuidas. Hablando más especificamente de la distribución  de Gumbel cuya función de probabilidad es:
+$f(x)= -ln(-ln(F(x)))*\alpha +\mu$
+<!-- ![](gumbellll.png){width="50%"} -->
+
+Y su probabilidad acumulada es:
+
+$F(x)= e^{-e^{-\frac{(x-u)}{\alpha}}}$
+<!-- ![](xdgu.png){width="50%"} -->
 
 
+## Propiedades:
+
+La media esta dada por la formula $\overline x =u+ \mu_{y}\alpha$, la moda es $\mu$ y la mediana es$\mu - \beta  ln(ln(2))$  
+
+$\alpha = \frac{s_{x}}{\sigma_{y}}$, donde$s_{x}$ es la deviacion estandar  
+
+
+
+Esta es la formula del modeo donde $\mu_{y}$ y $\sigma_{y}$ son constantes que depende de la cantidad de datos que tenga muestra y nos la da la tabla 1. El valor de x nos va adeterminar el valor de la frecuencia 
+obteniendo la siguiente ecuación $x = \frac{b}{\alpha}+u$
+
+
+### Tabla 1
+
+
+<!-- ![Tomado de https://hidrologia.usal.es/temas/calculos_esta.pdf](tablamiu.png){width="50%"} -->
+
+## Aplicaciones:
+
+La principal aplicacion de esta distribución es en hidrologia ya que resulta muy util para analizar as variables que corresponden a las precipitaciones mensuales o anuales ya que toma los valores maximos o minimos pudiendo comprender las sequias o las inundaciones, adicionalmente se usa para prveer con gran exactitud cuando va avolver un terremoto de cierta magnitud, tambien  se usa para el analisis de las velocidades maximas en una Zona. 
+
+## Ejemplo 
+
+Calcular el caudal máximo en un tiempo de retorno de 50 años:
+
+Cuya media $\overline x= 21.97 \frac{m^3}{seg}$ y  Su desviación estandar es $s_{x}=13.22\frac{m^3}{seg}$
+
+Usando la tabla 1 se conoce que el valor de $\mu_{y}=0.5485$y de $\sigma_{y} = 1.1607$ aplicando
+
+$\alpha = \frac{13.22}{1.1607}=11.3168$
+
+$u= 21.97-0,5504 · 11,3168 = 15,741$
+
+Usando la ecuacion de probabilidad de Gumbel Tenemos que 
+$P(x>60) = 1- P(x<60)$ entonces $P(x<60)= e^{-e^{-\frac{(60-15,741)}{11.3168}}}= 0.9803$
+$P(x>60) = 1- P(x<60)= 1-0.9803 = 0.0197$
+Para hallar el periodo de retorno se debe usar el inverso de la probabilidad que esta dado por$\frac{1}{P(x)}=\frac{1}{0.0197}= 50.8$ años.
+
+
+Finalmente cuando nos piden hallar el  caudal a los 100 años conociendo el periodo de retorno se despeja la $P(x) =\frac{1}{T} $ donde $P(x)=\frac{1}{100}=0.01$ 
+Por lo tanto la $F(x)= 1-0.01=0.99$
+Finalmente Para hallar el caudal reemplazamos en la formula de $f(x)=-ln(-ln(F(x)))*\alpha +\mu$ y queda 
+$f(x)=-ln(-ln(0.99))*11.3168 +15,741=67.8\frac{m^3}{seg}$
+
+
+
+## Relacion con las otras distribuciones 
+
+La distribucion de Gumbel está relacionada con la distribución de Weibull ya que eesta tambien es una distribucion generalizada de valor extremos siendo esta muy util para calcular riesgos. Adicionalmente esta relacionada con la distribución normal debido a que en algunas ocasiones esta modela variables aleatorias incontrolables y finalmente se relaciona copn la distribución exponencial ya que cuando los intervalos de et son intervalos de tiempo la distribución de Gumbel se basa en eso para hallar el retorno. 
+
+## Bibliografia 
+
+* https://hidrologia.usal.es/temas/calculos_esta.pdf
+* https://www.stat.rice.edu/~dobelman/courses/texts/leemis.distributions.2008amstat.pdf
+* https://hidrologia.usal.es/Complementos/estadistica/distr_esta.pdf
+* https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_Gumbel
+* https://miscelaneamatematica.org/download/tbl_articulos.pdf2.8f3b5fceb28337a2.363930372e706466.pdf
+* https://mathworld.wolfram.com/GumbelDistribution.html
+* Probabilida y Estadistica Distribución de Variables aleatorias continuas: Distribuciones de Gumbel y Fréchet(P.Ortiz ,2015)

@@ -52,7 +52,9 @@ _Imagen 2: Distribución Normal_
 Lo que hace que la distribución de Cauchy sea interesante es que, aunque sea definida por utilizar el sistema físico de una ruleta aleatoria, una variable aleatoria con una distribución de Cauchy no tiene una función de generación de media, varianza o momento. En esta distribución no existen todos los momentos sobre el origen que se utilizan para definir estos parámetros.
 
 
+
 _FUNCIÓN DE DENSIDAD DE PROBABILIDAD_
+
 La distribución de Cauchy tiene la función de densidad de probabilidad
 
 <div>
@@ -68,12 +70,11 @@ dónde x_{0}es el parámetro de ubicación, que especifica la ubicación del pic
 El valor máximo o amplitud de Cauchy es 
 
 <div>
-<p style = 'text-align:center;'>
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/68ed88d8bb3e175ecda69012549a10c9b0874ebf" alt="JuveYell" width="90px">
-</p>
-</div>, situado en x=x_{0}
 
-A veces es conveniente expresar en términos del parámetro complejo {\displaystyle \psi =x_{0}+i\gamma }
+$$\dfrac{1}{\pi \gamma}$$
+</div>, situado en $x = x_{0}$
+
+A veces es conveniente expresar en términos del parámetro complejo $\displaystyle \psi  =x_{0}+ i \gamma$
 
 <div>
 <p style = 'text-align:center;'>
@@ -82,19 +83,20 @@ A veces es conveniente expresar en términos del parámetro complejo {\displayst
 </div>
 
 
-El caso especial cuando x_{0}=0 y \gamma =1se llama distribución de Cauchy estándar con la función de densidad de probabilidad: 
+El caso especial cuando $x_{0} = 0$ y $\gamma = 1$se llama distribución de Cauchy estándar con la función de densidad de probabilidad: 
 
 <div>
 <p style = 'text-align:center;'>
-<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/0f3550c97c02f55d61010db6a38b2ef058a888e9"alt="JuveYell" width="300px">
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/0f3550c97c02f55d61010db6a38b2ef058a888e9"alt="JuveYell" width="200px">
 </p>
 </div>
+
 
 En física, a menudo se usa una función Lorentziana de tres parámetros:
 
 <div>
 <p style = 'text-align:center;'>
-<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/ef75c5f31667a907f64963eb478d03f33f8374d2"alt="JuveYell" width="300px">
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/ef75c5f31667a907f64963eb478d03f33f8374d2"alt="JuveYell" width="500px">
 </p>
 </div>
 
@@ -102,16 +104,17 @@ Dónde I es la altura del pico. La función Lorentziana de tres parámetros indi
 
 <div>
 <p style = 'text-align:center;'>
-<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/a422050e42a64cb349c2a34b6b468f2187951bc2"alt="JuveYell" width="300px">
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/a422050e42a64cb349c2a34b6b468f2187951bc2"alt="JuveYell" width="80px">
 </p>
 </div>
 
 _FUNCIÓN DE DISTRIBUCIÓN ACUMULATIVA_
+
 La función de distribución acumulativa de la distribución de Cauchy es:
 
 <div>
 <p style = 'text-align:center;'>
-<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/c8d6aa165b3df5d0a44e4afe1245cd88fdf9b640"alt="JuveYell" width="300px">
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/c8d6aa165b3df5d0a44e4afe1245cd88fdf9b640"alt="JuveYell" width="200px">
 </p>
 </div>
 
@@ -127,13 +130,13 @@ _FUNCIÓN DE DISTRIBUCIÓN ACUMULADA_
 La función de distribución acumulativa de la distribución de Cauchy es:
 <div>
 <p style = 'text-align:center;'>
-<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/c8d6aa165b3df5d0a44e4afe1245cd88fdf9b640="JuveYell" width="300px">
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/c8d6aa165b3df5d0a44e4afe1245cd88fdf9b640"alt="JuveYell" width="300px">
 </p>
 </div>
 y la función de cuantiles ( CDF inversa ) de la distribución de Cauchy es
 <div>
 <p style = 'text-align:center;'>
-<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/42c17241be79f1edbb111b82fc9a86ad55c9fd37" ="JuveYell" width="300px">
+<img src= "https://wikimedia.org/api/rest_v1/media/math/render/svg/42c17241be79f1edbb111b82fc9a86ad55c9fd37"alt="JuveYell" width="300px">
 </p>
 </div>
 
@@ -145,7 +148,7 @@ Muestre la definición de la distribución de Cauchy:
 
 <div>
 <p style = 'text-align:center;'>
-<img src= "https://support.ptc.com/help/mathcad/r8.0/es/PTC_Mathcad_Help/images/example_cauchy_functions0.png" = "JuveYell" width="300px">
+<img src= "https://support.ptc.com/help/mathcad/r8.0/es/PTC_Mathcad_Help/images/example_cauchy_functions0.png"alt="JuveYell" width="300px">
 </p>
 </div>
 
@@ -158,7 +161,7 @@ Donde:
 
 * En espectroscopía , la distribución de Cauchy describe la forma de las líneas espectrales que están sujetas a un ensanchamiento homogéneo en el que todos los átomos interactúan de la misma manera con el rango de frecuencia contenido en la forma de la línea. Muchos mecanismos provocan un ensanchamiento homogéneo, sobre todo el ensanchamiento de colisiones . El ensanchamiento natural o de por vida también da lugar a una forma de línea descrita por la distribución de Cauchy.
 
-* Las aplicaciones de la distribución de Cauchy o su transformación se pueden encontrar en campos que trabajan con crecimiento exponencial. Un artículo de 1958 de White [30] derivó el estadístico de prueba para estimadores de\hat{\beta} para la ecuación {\displaystyle x_{t+1}=\beta {x}_{t}+\varepsilon _{t+1},\beta >1} y donde el estimador de máxima verosimilitud se encuentra usando mínimos cuadrados ordinarios mostró que la distribución muestral del estadístico es la distribución de Cauchy.
+* Las aplicaciones de la distribución de Cauchy o su transformación se pueden encontrar en campos que trabajan con crecimiento exponencial. Un artículo de 1958 de White [30] derivó el estadístico de prueba para estimadores de\hat{\beta} para la ecuación $\displaystyle x_{t+1}=\beta {x}_{t}+\varepsilon _{t+1},\beta >1$ y donde el estimador de máxima verosimilitud se encuentra usando mínimos cuadrados ordinarios mostró que la distribución muestral del estadístico es la distribución de Cauchy.
 
 * Distribución de Cauchy acumulada ajustada a las precipitaciones máximas de un día usando CumFreq , ver también ajuste de distribución La distribución de Cauchy es a menudo la distribución de observaciones de objetos que giran. La referencia clásica para esto se llama el problema del faro de Gull y, como en la sección anterior, la distribución de Breit-Wigner en la física de partículas.
 

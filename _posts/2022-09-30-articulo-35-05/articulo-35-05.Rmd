@@ -1,21 +1,63 @@
 ---
-title: "articulo-35-05"
+title: "Distribucion Binomial Negativa"
 description: |
-  A short description of the post.
-author: "Juan\tMarin Hincapie"
-date: 2022-09-30
-output:
-  distill::distill_article:
-    self_contained: false
+  Articulo de la distribucion binomial negativa con sus condiciones, historia y aplicaciones.
+author:
+  - name: Juan José Marín 
+    affiliation: Javeriana Cali
+    affiliation_url: https://www.javerianacali.edu.co
+date: "`r Sys.Date()`"
+output: distill::distill_article
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+<p><b style = 'color : red ; font-size: 50px;'>Historia</b></p>
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+La distribucion binomial negativa aparece en un estudio de Pierre Remond de Montmort (1678-1719) sobre los juegos de azar en 1714, pero antes ya habia sido descrita por Blaise Pascal (1623-1662). Mas adelante, esta distribución fue propuesta como una alternativa a la distribución de Poisson para modelar el numero de ocurrencias de un suceso cuando los datos presentan lo que se conoce como variación extra-Poisson o sobre dispersión.
 
+<!-- ![](images/Gassendi-01.jpg){width="130"} -->
 
+<p><b style = 'color : red ; font-size: 40px;'>definicion</b></p>
+
+La distribución binomial negativa es un modelo adecuado para tratar aquellos procesos en los que se repite un determinado ensayo o prueba hasta conseguir un número determinado de resultados favorables (por vez primera) .Es por tanto de gran utilidad para aquellos muestreos que procedan de esta manera.
+
+<p><b style = 'color : red ; font-size: 40px;'>Condiciones</b></p>
+
+-   El proceso consta de un número no definido de pruebas separadas o separables . El proceso concluirá cuando se obtenga un determinado número de resultados favorables K
+
+-   Cada prueba puede dar dos resultados posibles mutuamente excluyentes A y no A La probabilidad de obtener un resultado A en cada una de las pruebas es p siendo la probabilidad de no A , q . Lo que nos lleva a que p+q=1
+
+-   Las probabilidades p y q son constantes en todas las pruebas. Todas las pruebas son independientes.
+
+<!-- ![](images/Screenshot%202022-10-02%20182500.png) -->
+
+<!-- ![](images/chart_nevative_binomial.png){width="560"} -->
+
+<p><b style = 'color : red ; font-size: 40px;'>Condiciones</b></p>
+
+La distribución binomial negativa se utiliza cuando se dan las siguientes condiciones:
+
+-   El número de pruebas no es fijo.
+
+-   Las pruebas continúan hasta llegar al resultado correcto **r** (las pruebas nunca son menos de **r**).
+
+-   La probabilidad de éxito es la misma de prueba a prueba.
+
+<p><b style = 'color : red ; font-size: 40px;'>Aplicaciones</b></p>
+
+Para lo que mas se usa la distribución binomial negativa en el campo de la ingeniería es para saber si el resultado de un proyecto será el adecuado, ya que si la probabilidad de tener muchos fracasos es alta se podría descartar el proyecto antes de tener que invertir en hacer pruebas, ya que estas en el caso de la ingeniería pueden ser bastante complicadas y costosas.
+
+<!-- ![](images/Screenshot%202022-10-02%20184830.png){width="490"} -->
+
+<p><b style = 'color : red ; font-size: 40px;'>Ejemplos</b></p>
+
+Si la probabilidad de que un niño expuesto a una enfermedad contagiosa la contraiga es **0.40** ¿Cuál es la probabilidad de que el décimo niño expuesto a la enfermedad sea el tercero en contraerla?
+
+En este caso, **X** es el número de niños expuestos a la enfermedad hasta encontrar el tercero en contraer la enfermedad.
+
+<!-- ![](images/Screenshot%202022-10-02%20185516.png) -->
+
+La solucion es: ![{\\displaystyle \\!f\_{b}(10;3;0,\\!4)={10-1 \\choose 3-1}0,\\!4\^{3}(1-0,4)\^{10-3}={9 \\choose 2}0,\\!4\^{3}(0,\\,6)\^{7}=0,\\!0644973}](https://wikimedia.org/api/rest_v1/media/math/render/svg/865d70ea9b2486960f6db7876af1546b0ff67f4d){alt="{\\displaystyle \\!f_{b}(10;3;0,\\!4)={10-1 \\choose 3-1}0,\\!4^{3}(1-0,4)^{10-3}={9 \\choose 2}0,\\!4^{3}(0,\\,6)^{7}=0,\\!0644973}"}

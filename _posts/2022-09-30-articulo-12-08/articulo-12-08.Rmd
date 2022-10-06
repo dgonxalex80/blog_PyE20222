@@ -36,39 +36,50 @@ Se sabe que el tiempo en una página web sigue una distribución exponencial con
 Se require calcular la probabilidad de que la visita a la pagina dure como mucho 3 minutos.
 
 ## Solución
-como $E(X) = \frac {1}{\lambda}; 5 = \frac {1}{\lambda};\lambda = 0.2$.
-P(X≤3)=1-[1−P(X<3)]
-       =1-[1−(1−e^(−0.2*3)]
-       =1-0.548812
-       =0.451188
+como  $$E(X) = \frac {1}{\lambda}$$
+$$5 = \frac {1}{\lambda}$$
+$$\lambda = 0.2$$
+$$P(X≤3)=1-[1−P(X<3)]$$
+       $$=1-[1−(1−\exp{(−0.2*3)}]$$
+       $$=1-0.548812$$
+       $$=0.451188$$
 
 ## Código en R
-pexp(3, rate = 0.2) # 0.4511884 o 45.12%
-1 - pexp(3, rate = 0.2, lower.tail = FALSE) # Equivalente
+`pexp(3, rate = 0.2) # 0.4511884 o 45.12%`
+`1 - pexp(3, rate = 0.2, lower.tail = FALSE) # Equivalente`
 
 La probabilidad Calculada (45.12%) corresponde al área que podemos graficar en R con el siguiente código: 
-exp_area(rate = 0.2, ub = 3, acolor = rgb(0, 0, 1, alpha = 0.5))
-text(1, 0.075, "45.12%", srt = 90, col = "white", cex = 1.2)
+
+`exp_area(rate = 0.2, ub = 3, acolor = rgb(0, 0, 1, alpha = 0.5))`
+`text(1, 0.075, "45.12%", srt = 90, col = "white", cex = 1.2)`
+
 ![Grafica 1](Ejemplo 1 grafica.jpg)
 
 ## Ejemplo 1.2
-Si ademas, queremos encontrar la probabilidad de que la visita dure entre 2 y 6 minutos, podemos usar la función en R:
-pexp(6, rate = 0.2) - pexp(2, rate = 0.2) # 0.3691258 o 36.91%
 
-Y si queremos obtener el grafico correspondente de la probabilidad usamos: 
-exp_area(rate = 0.2, lb = 2, ub = 6, acolor = rgb(0, 0, 1, alpha = 0.5))
-text(4, 0.05, "36.91%", col = "white", cex = 1.2)
+Si ademas, queremos encontrar la probabilidad de que la visita dure entre 2 y 6 minutos, podemos usar la función en R:
+`pexp(6, rate = 0.2) - pexp(2, rate = 0.2) # 0.3691258 `
+
+Y si queremos obtener el grafico correspondente de la probabilidad usamos:
+
+`exp_area(rate = 0.2, lb = 2, ub = 6, acolor = rgb(0, 0, 1, alpha = 0.5))`
+`text(4, 0.05, "36.91%", col = "white", cex = 1.2)`
+
 ![Grafica 2](Ejemplo 1.2 grafica.jpg)
 
 # Aplicaciones
+
 Como se habia dicho anteriormente, esta distribución se utiliza para describir procesos en los que interesa saber el tiempo hasta que ocurre determinado evento, en particular, se utiliza para modelar tiempos de supervivencia como el tiempo que tarda una parícula en desintegrarse. Se utilizan habitualmente en cálculos de fiabilidad de productos, es decir, el tiempo que dura un producto (control de calidad). 
 
 # Relaciones entre distribuciones nivariadas
+
 La principal reación que encontramos de la distribución exponencial es con la distribución de Poisson.
+
 ![Relaciones](Relaciones.jpg)
 
 # Referencias
-https://openstax.org/books/introducci%C3%B3n-estad%C3%ADstica-empresarial/pages/5-3-la-distribucion-exponencial
-http://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro19/52distribucin_exponencial.html
-https://medium.com/qu4nt/distribucion-exponencial-python-1d921a87f835#:~:text=La%20distribuci%C3%B3n%20exponencial%20se%20encuentra,misma%20en%20la%20literatura%20estad%C3%ADstica.
-https://r-coder.com/distribucion-exponencial-r/#:~:text=(2)%20%23%200.8646647-,Ejemplo%20con%20pexp%3A%20calculando%20probabilidades%20exponenciales,0.2%20%CE%BB%3D0.2.
+
+* https://openstax.org/books/introducci%C3%B3n-estad%C3%ADstica-empresarial/pages/5-3-la-distribucion-exponencial
+* http://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro19/52distribucin_exponencial.html
+* https://medium.com/qu4nt/distribucion-exponencial-python-1d921a87f835#:~:text=La%20distribuci%C3%B3n%20exponencial%20se%20encuentra,misma%20en%20la%20literatura%20estad%C3%ADstica.
+* https://r-coder.com/distribucion-exponencial-r/#:~:text=(2)%20%23%200.8646647-,Ejemplo%20con%20pexp%3A%20calculando%20probabilidades%20exponenciales,0.2%20%CE%BB%3D0.2.

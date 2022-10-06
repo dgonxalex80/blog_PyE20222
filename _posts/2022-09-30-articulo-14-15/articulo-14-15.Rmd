@@ -14,7 +14,7 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## ¿Quien fué E. J. Gumbel?
+## **¿Quien fué E. J. Gumbel ?**
 
 Emil Julius Gumbel (nacido el 18 de julio de 1891 en Munich; fallecido el 10 de septiembre de 1966 en Nueva York) fue matemático, activista político y pacifista. Era judío y huyó de Alemania en 1933, año en que se le privó de la nacionalidad alemana. Tuvo posteriormente las nacionalidades francesa y estadounidense. Enseñó en la Universidad de Heidelberg (Alemania), en la Sorbona y en la Universidad de Lyon (Francia), y en la New School for Social Research de Nueva York y en la Universidad de Columbia (Estados Unidos).
 
@@ -24,7 +24,7 @@ knitr::include_graphics("gumbel.jpg")
 ```
 
 
-## Contexto Modelo Gumbel
+## **Contexto Modelo Gumbel**
 
 En teoría de probabilidad y estadística la distribución de Gumbel es utilizada para modelar la distribución del máximo (o el mínimo), por lo que se usa para calcular valores extremos. Por ejemplo, sería muy útil para representar la distribución del máximo nivel de un río a partir de los datos de niveles máximos durante 10 años. Es por esto que resulta muy útil para predecir terremotos, inundaciones o cualquier otro desastre natural que pueda ocurrir.
 
@@ -32,11 +32,11 @@ La aplicabilidad potencial de la distribución de Gumbel para representar los m�
 
 Esta distribución podría usarse para representar la distribución del nivel máximo de un río en un año en particular si hubiera una lista de valores máximos para los últimos diez años. Es útil para predecir la posibilidad de que ocurra un terremoto extremo, una inundación u otro desastre natural.
 
-## Origen del modelo matematico
+## **Origen del modelo matemático**
  
 La primera distribución límite fue dada por Frechet en 1926, la segunda por Weibull a mediados de 1930 y por ultimo Gumbel en 1958, quien tuvo principal interes teorico y practico de la ultima distribucion recibiendo ası, su nombre, presentandola en el libro Statistics of extremes
 
-## Caracteristicas
+## **Caracteristicas**
 
 1. La moda es μ, mientras que la mediana es $\mu -\beta \ln \left(\ln 2\right)$, y la media viene dada por ${\displaystyle \operatorname {E} (X)=\mu +\gamma \beta }$, El apoyo por $x \in  \mathbb R$, PDF		$\frac{1}{\beta} e ^ {- (z + e ^ {- z})}$.
 
@@ -45,11 +45,11 @@ La desviación estándar $\sigma$  es ${\displaystyle \beta \pi /{\sqrt {6}}}$ p
 
 En el modo, donde ${\displaystyle x=\mu }$, El valor de ${\displaystyle F(x;\mu ,\beta )}$ se convierte en ${\displaystyle e^{-1}\approx 0.37}$ , independientemente del valor de ${\displaystyle \beta .}$
 
-## Ejemplo
+## **Ejemplo**
 
-Cuando $\mu$ = 0 y $\beta$ = 1, la distribución se denomina Distribución estándar de Gumbel (mínimo). El PDF se convierte en: $\ e^{x} \ e^{-e^{x}}$ 
+Cuando $\mu$ = 0 y $\beta$ = 1, la distribución se denomina Distribución estándar de Gumbel (mínimo). El PDF se convierte en: $\exp{(x)} \exp^{(-\exp{(x)})}$ 
 
-## Aplicaciones 
+## **Aplicaciones** 
 
 1. Gumbel ha demostrado que el valor máximo (o estadístico de último orden ) en una muestra de una variable aleatoria que sigue una distribución exponencial menos el logaritmo natural del tamaño de la muestra se acerca más a la distribución de Gumbel al aumentar el tamaño de la muestra. 
 

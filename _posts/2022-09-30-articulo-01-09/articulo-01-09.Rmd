@@ -1,22 +1,99 @@
 ---
-title: "articulo-01-09"
-description: |
-  A short description of the post.
-author: "Emerson Armando\tRamirez Gutierrez"
-date: 2022-09-30
-preview:
+title: "Distribución Gamma"
+
+<div class=text-justify> description: | 
+ Este articulo tiene como objetivo brindar al lector información de las principales características de la distribución gamma, para su fácil comprensión se desarrolló inicialmente desde una breve perspectiva histórica para luego pasar a describir sus fundamentos teóricos, como complemento se brinda un ejemplo especifico y finalmente se muestran algunas aplicaciones en el mundo real para esta distribución.  
+author:
+  - name: Emerson Armando Ramirez Gutierrez
+date: 2022-09-29
+preview: gamma.png
 output:
   distill::distill_article:
     self_contained: false
+csl: ieee.csl
+bibliography: bibliografia.bib
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+<div style="text-align: justify">
 
-Distill is a publication format for scientific and technical writing, native to the web.
+## **Origen**
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Esta distribución tiene su origen en la función Gamma que fue estudiada por primera vez por el matemático Suizo Leonhard Euler entre los años de 1730-1731 con el objetivo de generalizar el factorial para números diferentes a los enteros @cabezas1983funcion, debido a la importancia que adquirió en el tiempo más matemáticos de renombre como Carl Friedrich Gauss, Adrien-Marie Legendre y entre otros se sumaron a su investigación y contribuyeron a su actual definición @buesaquillo2014calculo, cabe resaltar que la distribución Gamma se considera el caso general para algunas distribuciones como Erlang y Ji-Cuadrada @arroyo2014distribuciones.
 
 
+## **Características**  
+
+Esta es una distribución de probabilidad de carácter continuo, se usa frecuentemente para modelar datos con comportamiento asimétrico de sesgo positivo, para definir la función de distribución o densidad de Gamma se necesita saber antes la definición de la función Gamma @walpole2012probabilidad la cual se expresa de la siguiente manera:
+
+$$\Gamma (\alpha) = \int_{0}^{\infty} x^{\alpha-1} e^{-x} dx , \hspace{.5cm}\text{ para } \alpha>0$$
+
+Algunas de las propiedades de esta función son:
+
+* $\Gamma(\frac{1}{2})=\sqrt{\pi}$
+* $\Gamma(n+1) = n!$ *Si n es un entero positivo.*
+* $\Gamma(n+1) = n\Gamma(n)$ *n>0.*
+
+Las propiedades mostradas son una herramienta muy útil a la hora de resolver problemas con la función de distribución de gamma que se define como:
+
+$$f(x,\alpha,\beta)= 
+    \left\{\begin{array}{lcc}\frac{1}{\beta^{\alpha}\Gamma(\alpha)}x^{\alpha-1}e^{\frac{-x}{\beta}} & \text{para}& x>0;\hspace{.3cm}\alpha,\beta>0\\
+    0                                                                                               &\text{en cualquier} & \text{otro caso} \end{array}\right.$$
+
+En algunos casos encontraremos que la función de densidad de gamma esta expresada con los terminos de $\alpha$ y $\lambda$, donde $\beta=\frac{1}{\lambda}$. Por otro lado, tenemos que la función de distribución acumulada con la cual podemos encontrar que una variable aleatoria X continua sea menor que un valor x en concreto se define como:
+
+$$F(x)=\frac{1}{\beta^{\alpha}\Gamma(\alpha)}\int_{0}^{x}t^{\alpha-1}e^{\frac{-t}{\beta}}dt, \hspace{.5cm}x>0 $$
+
+
+Por ultimo las expresiones para encontrar la esperanza o media y la varianza se definen de la siguiente manera:
+
+ * $E(x)=\alpha\beta$
+ * $\sigma^{2}=\alpha\beta^{2}$
+
+## **Ejemplo**
+
+En cierta ciudad el consumo diario de energía eléctrica, en millones de kilovatios por hora, puede considerarse como una variable aleatoria con distribución GAMMA de parámetros $\alpha=3$ y $\beta=0.5$. La planta de energía de esta ciudad tiene una capacidad diaria de 10 millones de kWh.
+Hallar la probabilidad de que este abastecimiento sea insuficiente en un día cualquiera.
+
+Solución
+
+Primero extraemos la información del problema, nos dicen que el consumo diario de energía eléctrica en millones de kWh se considera como una variable aleatoria por lo que la consideramos X, también nos brindan los parámetros de $\alpha=3$ y $\lambda=0.5$ que describen la forma de Gamma, como se muestra en la siguiente imagen.
+
+```{r}
+x=seq(0,25,0.001);
+y=dgamma(x,shape =3,rate = 0.5)
+plot.new()
+grid(nx = NULL, ny = NULL,lty = 2, col = "gray", lwd = 2)
+par(new = TRUE)
+plot(x,y,"l",main="Distribución Gamma ",ylab="Probabilidad",xlab="Consumo diario de energía eléctrica en millones de kWh",col="blue",lwd=2)
+polygon(x,y,col="slateblue1")
+```
+Como nos piden hallar la probabilidad de que el abastecimiento sea insuficiente en un día cualquiera, tendríamos que calcular $P(X>10)$, ya que 10 millones de kWh es la capacidad máxima que puede abastecer en un día la planta, si se pasa de esta cantidad ósea mayor a 10 millones de kWh la demanda será mayor que la capacidad y tendrían abastecimiento insuficiente en la planta distribuidora de energía.
+
+La $P(X>10)$ se puede expresar como:
+
+$1-P(X<10)=1-F(10)$
+
+Usamos la función de densidad acumulada de gamma para hallar $F(10)$, reemplazando con $x=10$,$\alpha=3$ y $\lambda=0.5$ obtenemos:
+
+$$\beta=\frac{1}{\lambda}=\frac{1}{0.5}=2$$
+
+$$F(10)=\frac{1}{2^{3}\Gamma(3)}\int_{0}^{10}x^{3-1}e^{\frac{-x}{2}}dx$$
+
+Para encontrar $\Gamma(3)$ se utiliza la propiedad $\Gamma(n+1) = n!$ ya que $\alpha$ se podria rescribir como $\alpha=n+1=3=2+1$ y como $n$ es un numero entero positivo se puede aplicar la propiedad de este modo encontramos que:
+
+$\Gamma(3)=\Gamma(2+1) = 2!=2$
+
+Reemplazando y resolviendo algunas operaciones obtenemos:
+
+$$F(10)=\frac{1}{16}\int_{0}^{10}x^{2}e^{\frac{-x}{2}}dx=\frac{1}{16}.14.01=0.875$$
+
+Finalmente, obtenemos que $P(X>10)=1-F(10)=1-0.875=0.1246$, en conclusión la probabilidad de que el abastecimiento de energía en un día cualquiera sea insufciente es del ***12.46%***
+
+
+
+## **Aplicaciones**
+
+La distribución Gamma tiene un gran campo de aplicaciones, pero se suele enfocar a estimaciones de probabilidad temporales como lo es en el caso de la teoría de la confiablidad donde se requiere saber una certeza o probabilidad de que un determinado sistema o proceso cumpla unas especificaciones durante un determinado tiempo en unas circunstancias específicas como lo pueden ser ambientales, técnicas, operativas o de seguridad, esto permite medir desempeños y comportamientos de sistemas con el propósito de mejorar la eficiencia en calidad y costos @garcia2006introduccion. Lo anterior a beneficiado a algunas industrias como la electrónica en donde ha contribuido en la reducción del tamaño de los componentes, confiabilidad de software, numero de componentes y resistencia de circuitos integrados, en el sector industrial seguridad de centrales nucleares, comparación en las alternativas de generación eléctrica y por parte de la industria automotriz en la confiabilidad de evaluación de sistemas de automóviles, así como también la reducción de los costos por garantía @escalona2016estimacion.
